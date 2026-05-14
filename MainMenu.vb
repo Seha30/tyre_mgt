@@ -2,6 +2,10 @@
 
 Public Class MainMenu
 
+    Public Property CurrentUser As String
+    Public Property CurrentRole As String
+
+
     Private Sub HighlightButton(activeBtn As Guna.UI2.WinForms.Guna2Button)
         ' Reset all buttons in the sidebar back to default
         For Each ctrl As Control In pnlSidebarPanel.Controls
@@ -15,6 +19,22 @@ Public Class MainMenu
         ' Highlight the active button
         activeBtn.FillColor = Color.Gray
         activeBtn.ForeColor = Color.White
+    End Sub
+
+    Private Sub MainMenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        lblFormTitle.Text = "Dashboard"
+        lblWelcome.Text = "Welcome, " & CurrentUser & " (" & CurrentRole & ")"
+
+        Select Case CurrentRole
+            Case "Admin"
+            ' Full access
+            Case "Manager"
+                btnStaffMgtMmenu.Enabled = False
+            Case "Cashier"
+                btnStaffMgtMmenu.Enabled = False
+                btnSupplierManagement.Enabled = False
+                btnInventoryMgtMmenu.Enabled = False
+        End Select
     End Sub
 
     Private Sub btnCustomer_mgt_Click(sender As Object, e As EventArgs) Handles btnCustomer_mgt.Click
@@ -31,7 +51,7 @@ Public Class MainMenu
 
         ' Update top panel label
         lblFormTitle.Text = "Customer Management"
-
+        'Me.Close()
 
 
 
@@ -40,6 +60,7 @@ Public Class MainMenu
     End Sub
 
     Private Sub btnDashboardMmenu_Click(sender As Object, e As EventArgs) Handles btnDashboardMmenu.Click
+        LoadFormIntoPanel(New Dashboard())
         HighlightButton(btnDashboardMmenu) ' highlight this button
 
 
@@ -87,5 +108,62 @@ Public Class MainMenu
 
         ' Update top panel label
         lblFormTitle.Text = "Inventory Management"
+    End Sub
+
+    Private Sub btnSupplierManagement_Click(sender As Object, e As EventArgs) Handles btnSupplierManagement.Click
+
+        ' Update top panel label
+        lblFormTitle.Text = "Supplier Management"
+    End Sub
+
+    Private Sub btnSettingMmenu_Click(sender As Object, e As EventArgs) Handles btnSettingMmenu.Click
+
+        ' Update top panel label
+        lblFormTitle.Text = "Settings"
+    End Sub
+
+    Private Sub btnLogoutMmenu_Click(sender As Object, e As EventArgs) Handles btnLogoutMmenu.Click
+
+        ' Update top panel label
+        lblFormTitle.Text = "Logout"
+
+        ' ✅ Step 1: Confirm logout
+        Dim result As DialogResult = MessageBox.Show("Are you sure you want to log out?",
+                                                     "Confirm Logout",
+                                                     MessageBoxButtons.YesNo,
+                                                     MessageBoxIcon.Question)
+
+        If result = DialogResult.Yes Then
+            ' ✅ Step 2: Optional validation – check if user is logged in
+            If String.IsNullOrEmpty(CurrentUser) OrElse String.IsNullOrEmpty(CurrentRole) Then
+                MessageBox.Show("No active session found. Returning to login screen.",
+                                "Logout",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information)
+            Else
+                MessageBox.Show("Goodbye, " & CurrentUser & " (" & CurrentRole & ")",
+                                "Logout Successful",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information)
+            End If
+
+            ' ✅ Step 3: Redirect to login form
+            Dim loginForm As New LoginFrm()
+            loginForm.Show()
+
+            ' ✅ Step 4: Close MainMenu
+            Me.Close()
+        End If
+
+
+
+
+
+
+
+
+
+
+
     End Sub
 End Class

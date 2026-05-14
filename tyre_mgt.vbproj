@@ -145,6 +145,26 @@
     <Compile Include="AddCustomer.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="AddCustomerControl.Designer.vb">
+      <DependentUpon>AddCustomerControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddCustomerControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddSupplierFrm.Designer.vb">
+      <DependentUpon>AddSupplierFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddSupplierFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerCRUD.vb" />
+    <Compile Include="Dashboard.Designer.vb">
+      <DependentUpon>Dashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DBConn.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -184,6 +204,15 @@
   <ItemGroup>
     <EmbeddedResource Include="AddCustomer.resx">
       <DependentUpon>AddCustomer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddCustomerControl.resx">
+      <DependentUpon>AddCustomerControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddSupplierFrm.resx">
+      <DependentUpon>AddSupplierFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginFrm.resx">
       <DependentUpon>LoginFrm.vb</DependentUpon>

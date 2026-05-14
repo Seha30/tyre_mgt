@@ -26,6 +26,9 @@ Partial Class MainMenu
         Me.pnlSidebarPanel = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnLogoutMmenu = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnSettingMmenu = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnSupplierManagement = New Guna.UI2.WinForms.Guna2Button()
         Me.btnInventoryMgtMmenu = New Guna.UI2.WinForms.Guna2Button()
         Me.btnDashboardMmenu = New Guna.UI2.WinForms.Guna2Button()
         Me.btnSalesPOSMmenu = New Guna.UI2.WinForms.Guna2Button()
@@ -35,6 +38,7 @@ Partial Class MainMenu
         Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
         Me.lblFormTitle = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.pnlContent = New Guna.UI2.WinForms.Guna2Panel()
+        Me.lblWelcome = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.pnlSidebarPanel.SuspendLayout()
         Me.Guna2Panel3.SuspendLayout()
         Me.Guna2Panel2.SuspendLayout()
@@ -43,6 +47,9 @@ Partial Class MainMenu
         'pnlSidebarPanel
         '
         Me.pnlSidebarPanel.Controls.Add(Me.Guna2Panel3)
+        Me.pnlSidebarPanel.Controls.Add(Me.btnLogoutMmenu)
+        Me.pnlSidebarPanel.Controls.Add(Me.btnSettingMmenu)
+        Me.pnlSidebarPanel.Controls.Add(Me.btnSupplierManagement)
         Me.pnlSidebarPanel.Controls.Add(Me.btnInventoryMgtMmenu)
         Me.pnlSidebarPanel.Controls.Add(Me.btnDashboardMmenu)
         Me.pnlSidebarPanel.Controls.Add(Me.btnSalesPOSMmenu)
@@ -53,7 +60,7 @@ Partial Class MainMenu
         Me.pnlSidebarPanel.FillColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.pnlSidebarPanel.Location = New System.Drawing.Point(0, 0)
         Me.pnlSidebarPanel.Name = "pnlSidebarPanel"
-        Me.pnlSidebarPanel.Size = New System.Drawing.Size(200, 618)
+        Me.pnlSidebarPanel.Size = New System.Drawing.Size(200, 767)
         Me.pnlSidebarPanel.TabIndex = 0
         '
         'Guna2Panel3
@@ -82,6 +89,60 @@ Partial Class MainMenu
         Me.Guna2Button2.TabIndex = 1
         Me.Guna2Button2.Text = "S&N Tyres"
         '
+        'btnLogoutMmenu
+        '
+        Me.btnLogoutMmenu.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnLogoutMmenu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnLogoutMmenu.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnLogoutMmenu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnLogoutMmenu.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnLogoutMmenu.Font = New System.Drawing.Font("Segoe UI Semibold", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLogoutMmenu.ForeColor = System.Drawing.Color.Black
+        Me.btnLogoutMmenu.Image = CType(resources.GetObject("btnLogoutMmenu.Image"), System.Drawing.Image)
+        Me.btnLogoutMmenu.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.btnLogoutMmenu.Location = New System.Drawing.Point(0, 680)
+        Me.btnLogoutMmenu.Margin = New System.Windows.Forms.Padding(5)
+        Me.btnLogoutMmenu.Name = "btnLogoutMmenu"
+        Me.btnLogoutMmenu.Size = New System.Drawing.Size(200, 55)
+        Me.btnLogoutMmenu.TabIndex = 9
+        Me.btnLogoutMmenu.Text = "Logout"
+        '
+        'btnSettingMmenu
+        '
+        Me.btnSettingMmenu.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnSettingMmenu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnSettingMmenu.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnSettingMmenu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnSettingMmenu.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnSettingMmenu.Font = New System.Drawing.Font("Segoe UI Semibold", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSettingMmenu.ForeColor = System.Drawing.Color.Black
+        Me.btnSettingMmenu.Image = CType(resources.GetObject("btnSettingMmenu.Image"), System.Drawing.Image)
+        Me.btnSettingMmenu.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.btnSettingMmenu.Location = New System.Drawing.Point(0, 615)
+        Me.btnSettingMmenu.Margin = New System.Windows.Forms.Padding(5)
+        Me.btnSettingMmenu.Name = "btnSettingMmenu"
+        Me.btnSettingMmenu.Size = New System.Drawing.Size(200, 55)
+        Me.btnSettingMmenu.TabIndex = 8
+        Me.btnSettingMmenu.Text = "Settings"
+        '
+        'btnSupplierManagement
+        '
+        Me.btnSupplierManagement.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnSupplierManagement.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnSupplierManagement.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnSupplierManagement.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnSupplierManagement.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnSupplierManagement.Font = New System.Drawing.Font("Segoe UI Semibold", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSupplierManagement.ForeColor = System.Drawing.Color.Black
+        Me.btnSupplierManagement.Image = CType(resources.GetObject("btnSupplierManagement.Image"), System.Drawing.Image)
+        Me.btnSupplierManagement.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.btnSupplierManagement.Location = New System.Drawing.Point(0, 360)
+        Me.btnSupplierManagement.Margin = New System.Windows.Forms.Padding(5)
+        Me.btnSupplierManagement.Name = "btnSupplierManagement"
+        Me.btnSupplierManagement.Size = New System.Drawing.Size(200, 55)
+        Me.btnSupplierManagement.TabIndex = 5
+        Me.btnSupplierManagement.Text = "Supplier Management"
+        '
         'btnInventoryMgtMmenu
         '
         Me.btnInventoryMgtMmenu.DisabledState.BorderColor = System.Drawing.Color.DarkGray
@@ -93,11 +154,11 @@ Partial Class MainMenu
         Me.btnInventoryMgtMmenu.ForeColor = System.Drawing.Color.Black
         Me.btnInventoryMgtMmenu.Image = CType(resources.GetObject("btnInventoryMgtMmenu.Image"), System.Drawing.Image)
         Me.btnInventoryMgtMmenu.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.btnInventoryMgtMmenu.Location = New System.Drawing.Point(0, 428)
+        Me.btnInventoryMgtMmenu.Location = New System.Drawing.Point(0, 490)
         Me.btnInventoryMgtMmenu.Margin = New System.Windows.Forms.Padding(5)
         Me.btnInventoryMgtMmenu.Name = "btnInventoryMgtMmenu"
         Me.btnInventoryMgtMmenu.Size = New System.Drawing.Size(200, 55)
-        Me.btnInventoryMgtMmenu.TabIndex = 0
+        Me.btnInventoryMgtMmenu.TabIndex = 7
         Me.btnInventoryMgtMmenu.Text = "Inventory Management"
         '
         'btnDashboardMmenu
@@ -129,11 +190,11 @@ Partial Class MainMenu
         Me.btnSalesPOSMmenu.ForeColor = System.Drawing.Color.Black
         Me.btnSalesPOSMmenu.Image = CType(resources.GetObject("btnSalesPOSMmenu.Image"), System.Drawing.Image)
         Me.btnSalesPOSMmenu.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.btnSalesPOSMmenu.Location = New System.Drawing.Point(0, 360)
+        Me.btnSalesPOSMmenu.Location = New System.Drawing.Point(0, 425)
         Me.btnSalesPOSMmenu.Margin = New System.Windows.Forms.Padding(5)
         Me.btnSalesPOSMmenu.Name = "btnSalesPOSMmenu"
         Me.btnSalesPOSMmenu.Size = New System.Drawing.Size(200, 55)
-        Me.btnSalesPOSMmenu.TabIndex = 0
+        Me.btnSalesPOSMmenu.TabIndex = 6
         Me.btnSalesPOSMmenu.Text = "Sales (POS)"
         '
         'btnProjectMgtMmenu
@@ -151,7 +212,7 @@ Partial Class MainMenu
         Me.btnProjectMgtMmenu.Margin = New System.Windows.Forms.Padding(5)
         Me.btnProjectMgtMmenu.Name = "btnProjectMgtMmenu"
         Me.btnProjectMgtMmenu.Size = New System.Drawing.Size(200, 55)
-        Me.btnProjectMgtMmenu.TabIndex = 0
+        Me.btnProjectMgtMmenu.TabIndex = 2
         Me.btnProjectMgtMmenu.Text = "Product Management"
         '
         'btnStaffMgtMmenu
@@ -169,7 +230,7 @@ Partial Class MainMenu
         Me.btnStaffMgtMmenu.Margin = New System.Windows.Forms.Padding(5)
         Me.btnStaffMgtMmenu.Name = "btnStaffMgtMmenu"
         Me.btnStaffMgtMmenu.Size = New System.Drawing.Size(200, 55)
-        Me.btnStaffMgtMmenu.TabIndex = 0
+        Me.btnStaffMgtMmenu.TabIndex = 4
         Me.btnStaffMgtMmenu.Text = "Staff      Management"
         '
         'btnCustomer_mgt
@@ -187,11 +248,12 @@ Partial Class MainMenu
         Me.btnCustomer_mgt.Margin = New System.Windows.Forms.Padding(5)
         Me.btnCustomer_mgt.Name = "btnCustomer_mgt"
         Me.btnCustomer_mgt.Size = New System.Drawing.Size(200, 55)
-        Me.btnCustomer_mgt.TabIndex = 0
+        Me.btnCustomer_mgt.TabIndex = 3
         Me.btnCustomer_mgt.Text = "Customer Management"
         '
         'Guna2Panel2
         '
+        Me.Guna2Panel2.Controls.Add(Me.lblWelcome)
         Me.Guna2Panel2.Controls.Add(Me.lblFormTitle)
         Me.Guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Guna2Panel2.Location = New System.Drawing.Point(200, 0)
@@ -215,14 +277,22 @@ Partial Class MainMenu
         Me.pnlContent.Dock = System.Windows.Forms.DockStyle.Fill
         Me.pnlContent.Location = New System.Drawing.Point(200, 100)
         Me.pnlContent.Name = "pnlContent"
-        Me.pnlContent.Size = New System.Drawing.Size(801, 518)
+        Me.pnlContent.Size = New System.Drawing.Size(801, 667)
         Me.pnlContent.TabIndex = 2
+        '
+        'lblWelcome
+        '
+        Me.lblWelcome.BackColor = System.Drawing.Color.Transparent
+        Me.lblWelcome.Location = New System.Drawing.Point(21, 58)
+        Me.lblWelcome.Name = "lblWelcome"
+        Me.lblWelcome.Size = New System.Drawing.Size(3, 2)
+        Me.lblWelcome.TabIndex = 2
         '
         'MainMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1001, 618)
+        Me.ClientSize = New System.Drawing.Size(1001, 767)
         Me.Controls.Add(Me.pnlContent)
         Me.Controls.Add(Me.Guna2Panel2)
         Me.Controls.Add(Me.pnlSidebarPanel)
@@ -231,6 +301,7 @@ Partial Class MainMenu
         Me.pnlSidebarPanel.ResumeLayout(False)
         Me.Guna2Panel3.ResumeLayout(False)
         Me.Guna2Panel2.ResumeLayout(False)
+        Me.Guna2Panel2.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -247,4 +318,8 @@ Partial Class MainMenu
     Friend WithEvents Guna2Panel3 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents lblFormTitle As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2Button2 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnSettingMmenu As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnSupplierManagement As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnLogoutMmenu As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents lblWelcome As Guna.UI2.WinForms.Guna2HtmlLabel
 End Class
