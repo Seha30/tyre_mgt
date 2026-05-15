@@ -26,7 +26,7 @@ Partial Class AddCustomer
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.btnAddCustomerCusfrm = New Guna.UI2.WinForms.Guna2Button()
-        Me.Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnDeleteCustomerCusfrm = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2HtmlLabel3 = New Guna.UI2.WinForms.Guna2HtmlLabel()
@@ -37,10 +37,11 @@ Partial Class AddCustomer
         Me.txtcustomerEmail = New Guna.UI2.WinForms.Guna2TextBox()
         Me.txtcustomerName = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2GroupBox1 = New Guna.UI2.WinForms.Guna2GroupBox()
+        Me.txtCustomerID = New Guna.UI2.WinForms.Guna2TextBox()
         Me.txtcustomerAddress = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.Guna2Button4 = New Guna.UI2.WinForms.Guna2Button()
-        Me.Guna2TextBox5 = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.Guna2Button3 = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnUpdateCustomerCusfrm = New Guna.UI2.WinForms.Guna2Button()
+        Me.txtsearchcustomer = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.btnSearchCustomer = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2GroupBox2 = New Guna.UI2.WinForms.Guna2GroupBox()
         Me.dgvCustomers = New Guna.UI2.WinForms.Guna2DataGridView()
         Me.Guna2GroupBox1.SuspendLayout()
@@ -58,27 +59,27 @@ Partial Class AddCustomer
         Me.btnAddCustomerCusfrm.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnAddCustomerCusfrm.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAddCustomerCusfrm.ForeColor = System.Drawing.Color.White
-        Me.btnAddCustomerCusfrm.Location = New System.Drawing.Point(850, 83)
+        Me.btnAddCustomerCusfrm.Location = New System.Drawing.Point(787, 76)
         Me.btnAddCustomerCusfrm.Name = "btnAddCustomerCusfrm"
-        Me.btnAddCustomerCusfrm.Size = New System.Drawing.Size(296, 45)
+        Me.btnAddCustomerCusfrm.Size = New System.Drawing.Size(135, 45)
         Me.btnAddCustomerCusfrm.TabIndex = 6
         Me.btnAddCustomerCusfrm.Text = "Add New Customer"
         '
-        'Guna2Button2
+        'btnDeleteCustomerCusfrm
         '
-        Me.Guna2Button2.BorderRadius = 15
-        Me.Guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2Button2.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.Guna2Button2.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2Button2.ForeColor = System.Drawing.Color.Black
-        Me.Guna2Button2.Location = New System.Drawing.Point(850, 213)
-        Me.Guna2Button2.Name = "Guna2Button2"
-        Me.Guna2Button2.Size = New System.Drawing.Size(296, 45)
-        Me.Guna2Button2.TabIndex = 7
-        Me.Guna2Button2.Text = "Delete Customer"
+        Me.btnDeleteCustomerCusfrm.BorderRadius = 15
+        Me.btnDeleteCustomerCusfrm.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnDeleteCustomerCusfrm.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnDeleteCustomerCusfrm.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnDeleteCustomerCusfrm.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnDeleteCustomerCusfrm.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnDeleteCustomerCusfrm.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDeleteCustomerCusfrm.ForeColor = System.Drawing.Color.Black
+        Me.btnDeleteCustomerCusfrm.Location = New System.Drawing.Point(787, 213)
+        Me.btnDeleteCustomerCusfrm.Name = "btnDeleteCustomerCusfrm"
+        Me.btnDeleteCustomerCusfrm.Size = New System.Drawing.Size(135, 45)
+        Me.btnDeleteCustomerCusfrm.TabIndex = 7
+        Me.btnDeleteCustomerCusfrm.Text = "Delete Customer"
         '
         'Guna2HtmlLabel1
         '
@@ -86,7 +87,7 @@ Partial Class AddCustomer
         Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Segoe UI Semibold", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Guna2HtmlLabel1.ForeColor = System.Drawing.Color.Black
-        Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(23, 43)
+        Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(26, 76)
         Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
         Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(83, 30)
         Me.Guna2HtmlLabel1.TabIndex = 1
@@ -98,7 +99,7 @@ Partial Class AddCustomer
         Me.Guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel2.Font = New System.Drawing.Font("Segoe UI Semibold", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Guna2HtmlLabel2.ForeColor = System.Drawing.Color.Black
-        Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(23, 147)
+        Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(26, 147)
         Me.Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
         Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(94, 29)
         Me.Guna2HtmlLabel2.TabIndex = 1
@@ -110,7 +111,7 @@ Partial Class AddCustomer
         Me.Guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel3.Font = New System.Drawing.Font("Segoe UI Semibold", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Guna2HtmlLabel3.ForeColor = System.Drawing.Color.Black
-        Me.Guna2HtmlLabel3.Location = New System.Drawing.Point(23, 250)
+        Me.Guna2HtmlLabel3.Location = New System.Drawing.Point(23, 220)
         Me.Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
         Me.Guna2HtmlLabel3.Size = New System.Drawing.Size(81, 38)
         Me.Guna2HtmlLabel3.TabIndex = 1
@@ -122,7 +123,7 @@ Partial Class AddCustomer
         Me.Guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel4.Font = New System.Drawing.Font("Segoe UI Semibold", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Guna2HtmlLabel4.ForeColor = System.Drawing.Color.Black
-        Me.Guna2HtmlLabel4.Location = New System.Drawing.Point(436, 213)
+        Me.Guna2HtmlLabel4.Location = New System.Drawing.Point(387, 185)
         Me.Guna2HtmlLabel4.Name = "Guna2HtmlLabel4"
         Me.Guna2HtmlLabel4.Size = New System.Drawing.Size(172, 30)
         Me.Guna2HtmlLabel4.TabIndex = 1
@@ -134,7 +135,7 @@ Partial Class AddCustomer
         Me.Guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel6.Font = New System.Drawing.Font("Segoe UI Semibold", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Guna2HtmlLabel6.ForeColor = System.Drawing.Color.Black
-        Me.Guna2HtmlLabel6.Location = New System.Drawing.Point(424, 44)
+        Me.Guna2HtmlLabel6.Location = New System.Drawing.Point(387, 57)
         Me.Guna2HtmlLabel6.Name = "Guna2HtmlLabel6"
         Me.Guna2HtmlLabel6.Size = New System.Drawing.Size(172, 29)
         Me.Guna2HtmlLabel6.TabIndex = 1
@@ -150,7 +151,7 @@ Partial Class AddCustomer
         Me.cmbcustomerType.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.cmbcustomerType.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.cmbcustomerType.ItemHeight = 30
-        Me.cmbcustomerType.Location = New System.Drawing.Point(424, 252)
+        Me.cmbcustomerType.Location = New System.Drawing.Point(377, 233)
         Me.cmbcustomerType.Name = "cmbcustomerType"
         Me.cmbcustomerType.Size = New System.Drawing.Size(352, 36)
         Me.cmbcustomerType.TabIndex = 3
@@ -166,12 +167,12 @@ Partial Class AddCustomer
         Me.txtcustomerPhone.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtcustomerPhone.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtcustomerPhone.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtcustomerPhone.Location = New System.Drawing.Point(26, 183)
+        Me.txtcustomerPhone.Location = New System.Drawing.Point(23, 183)
         Me.txtcustomerPhone.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtcustomerPhone.Name = "txtcustomerPhone"
         Me.txtcustomerPhone.PlaceholderText = ""
         Me.txtcustomerPhone.SelectedText = ""
-        Me.txtcustomerPhone.Size = New System.Drawing.Size(340, 45)
+        Me.txtcustomerPhone.Size = New System.Drawing.Size(300, 32)
         Me.txtcustomerPhone.TabIndex = 2
         '
         'txtcustomerEmail
@@ -185,12 +186,12 @@ Partial Class AddCustomer
         Me.txtcustomerEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtcustomerEmail.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtcustomerEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtcustomerEmail.Location = New System.Drawing.Point(23, 286)
+        Me.txtcustomerEmail.Location = New System.Drawing.Point(26, 263)
         Me.txtcustomerEmail.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtcustomerEmail.Name = "txtcustomerEmail"
         Me.txtcustomerEmail.PlaceholderText = ""
         Me.txtcustomerEmail.SelectedText = ""
-        Me.txtcustomerEmail.Size = New System.Drawing.Size(369, 48)
+        Me.txtcustomerEmail.Size = New System.Drawing.Size(297, 27)
         Me.txtcustomerEmail.TabIndex = 3
         '
         'txtcustomerName
@@ -204,17 +205,18 @@ Partial Class AddCustomer
         Me.txtcustomerName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtcustomerName.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtcustomerName.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtcustomerName.Location = New System.Drawing.Point(23, 80)
+        Me.txtcustomerName.Location = New System.Drawing.Point(26, 113)
         Me.txtcustomerName.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtcustomerName.Name = "txtcustomerName"
         Me.txtcustomerName.PlaceholderText = ""
         Me.txtcustomerName.SelectedText = ""
-        Me.txtcustomerName.Size = New System.Drawing.Size(340, 48)
+        Me.txtcustomerName.Size = New System.Drawing.Size(297, 28)
         Me.txtcustomerName.TabIndex = 1
         '
         'Guna2GroupBox1
         '
         Me.Guna2GroupBox1.BackColor = System.Drawing.Color.White
+        Me.Guna2GroupBox1.Controls.Add(Me.txtCustomerID)
         Me.Guna2GroupBox1.Controls.Add(Me.txtcustomerAddress)
         Me.Guna2GroupBox1.Controls.Add(Me.txtcustomerEmail)
         Me.Guna2GroupBox1.Controls.Add(Me.Guna2HtmlLabel4)
@@ -224,18 +226,39 @@ Partial Class AddCustomer
         Me.Guna2GroupBox1.Controls.Add(Me.Guna2HtmlLabel3)
         Me.Guna2GroupBox1.Controls.Add(Me.txtcustomerPhone)
         Me.Guna2GroupBox1.Controls.Add(Me.Guna2HtmlLabel2)
-        Me.Guna2GroupBox1.Controls.Add(Me.Guna2Button2)
+        Me.Guna2GroupBox1.Controls.Add(Me.btnDeleteCustomerCusfrm)
         Me.Guna2GroupBox1.Controls.Add(Me.Guna2HtmlLabel1)
-        Me.Guna2GroupBox1.Controls.Add(Me.Guna2Button4)
+        Me.Guna2GroupBox1.Controls.Add(Me.btnUpdateCustomerCusfrm)
         Me.Guna2GroupBox1.Controls.Add(Me.btnAddCustomerCusfrm)
         Me.Guna2GroupBox1.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Guna2GroupBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Guna2GroupBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
         Me.Guna2GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.Guna2GroupBox1.Name = "Guna2GroupBox1"
-        Me.Guna2GroupBox1.Size = New System.Drawing.Size(1352, 361)
+        Me.Guna2GroupBox1.Size = New System.Drawing.Size(943, 315)
         Me.Guna2GroupBox1.TabIndex = 8
         Me.Guna2GroupBox1.Text = "Customer Details"
+        '
+        'txtCustomerID
+        '
+        Me.txtCustomerID.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtCustomerID.DefaultText = "customerid"
+        Me.txtCustomerID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtCustomerID.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtCustomerID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtCustomerID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtCustomerID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtCustomerID.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.txtCustomerID.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtCustomerID.Location = New System.Drawing.Point(23, 44)
+        Me.txtCustomerID.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtCustomerID.Name = "txtCustomerID"
+        Me.txtCustomerID.PlaceholderText = ""
+        Me.txtCustomerID.ReadOnly = True
+        Me.txtCustomerID.SelectedText = ""
+        Me.txtCustomerID.Size = New System.Drawing.Size(229, 33)
+        Me.txtCustomerID.TabIndex = 9
+        Me.txtCustomerID.Visible = False
         '
         'txtcustomerAddress
         '
@@ -248,76 +271,76 @@ Partial Class AddCustomer
         Me.txtcustomerAddress.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtcustomerAddress.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtcustomerAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtcustomerAddress.Location = New System.Drawing.Point(424, 80)
+        Me.txtcustomerAddress.Location = New System.Drawing.Point(377, 97)
         Me.txtcustomerAddress.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtcustomerAddress.Name = "txtcustomerAddress"
         Me.txtcustomerAddress.PlaceholderText = ""
         Me.txtcustomerAddress.SelectedText = ""
-        Me.txtcustomerAddress.Size = New System.Drawing.Size(364, 115)
+        Me.txtcustomerAddress.Size = New System.Drawing.Size(364, 79)
         Me.txtcustomerAddress.TabIndex = 8
         '
-        'Guna2Button4
+        'btnUpdateCustomerCusfrm
         '
-        Me.Guna2Button4.BorderRadius = 15
-        Me.Guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2Button4.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Guna2Button4.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2Button4.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button4.Location = New System.Drawing.Point(850, 147)
-        Me.Guna2Button4.Name = "Guna2Button4"
-        Me.Guna2Button4.Size = New System.Drawing.Size(296, 45)
-        Me.Guna2Button4.TabIndex = 6
-        Me.Guna2Button4.Text = "UpdateCustomer"
+        Me.btnUpdateCustomerCusfrm.BorderRadius = 15
+        Me.btnUpdateCustomerCusfrm.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnUpdateCustomerCusfrm.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnUpdateCustomerCusfrm.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnUpdateCustomerCusfrm.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnUpdateCustomerCusfrm.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnUpdateCustomerCusfrm.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnUpdateCustomerCusfrm.ForeColor = System.Drawing.Color.White
+        Me.btnUpdateCustomerCusfrm.Location = New System.Drawing.Point(787, 147)
+        Me.btnUpdateCustomerCusfrm.Name = "btnUpdateCustomerCusfrm"
+        Me.btnUpdateCustomerCusfrm.Size = New System.Drawing.Size(135, 45)
+        Me.btnUpdateCustomerCusfrm.TabIndex = 6
+        Me.btnUpdateCustomerCusfrm.Text = "UpdateCustomer"
         '
-        'Guna2TextBox5
+        'txtsearchcustomer
         '
-        Me.Guna2TextBox5.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.Guna2TextBox5.DefaultText = "Search here....."
-        Me.Guna2TextBox5.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.Guna2TextBox5.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.Guna2TextBox5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox5.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox5.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox5.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Guna2TextBox5.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox5.Location = New System.Drawing.Point(43, 58)
-        Me.Guna2TextBox5.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Guna2TextBox5.Name = "Guna2TextBox5"
-        Me.Guna2TextBox5.PlaceholderText = ""
-        Me.Guna2TextBox5.SelectedText = ""
-        Me.Guna2TextBox5.Size = New System.Drawing.Size(349, 48)
-        Me.Guna2TextBox5.TabIndex = 10
+        Me.txtsearchcustomer.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtsearchcustomer.DefaultText = "Search here....."
+        Me.txtsearchcustomer.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtsearchcustomer.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtsearchcustomer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtsearchcustomer.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtsearchcustomer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtsearchcustomer.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.txtsearchcustomer.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtsearchcustomer.Location = New System.Drawing.Point(43, 58)
+        Me.txtsearchcustomer.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtsearchcustomer.Name = "txtsearchcustomer"
+        Me.txtsearchcustomer.PlaceholderText = ""
+        Me.txtsearchcustomer.SelectedText = ""
+        Me.txtsearchcustomer.Size = New System.Drawing.Size(349, 48)
+        Me.txtsearchcustomer.TabIndex = 10
         '
-        'Guna2Button3
+        'btnSearchCustomer
         '
-        Me.Guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2Button3.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Guna2Button3.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Guna2Button3.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button3.Location = New System.Drawing.Point(462, 58)
-        Me.Guna2Button3.Name = "Guna2Button3"
-        Me.Guna2Button3.Size = New System.Drawing.Size(180, 45)
-        Me.Guna2Button3.TabIndex = 11
-        Me.Guna2Button3.Text = "Search Customer"
+        Me.btnSearchCustomer.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnSearchCustomer.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnSearchCustomer.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnSearchCustomer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnSearchCustomer.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnSearchCustomer.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.btnSearchCustomer.ForeColor = System.Drawing.Color.White
+        Me.btnSearchCustomer.Location = New System.Drawing.Point(462, 58)
+        Me.btnSearchCustomer.Name = "btnSearchCustomer"
+        Me.btnSearchCustomer.Size = New System.Drawing.Size(180, 45)
+        Me.btnSearchCustomer.TabIndex = 11
+        Me.btnSearchCustomer.Text = "Search Customer"
         '
         'Guna2GroupBox2
         '
         Me.Guna2GroupBox2.BorderThickness = 0
         Me.Guna2GroupBox2.Controls.Add(Me.dgvCustomers)
-        Me.Guna2GroupBox2.Controls.Add(Me.Guna2TextBox5)
-        Me.Guna2GroupBox2.Controls.Add(Me.Guna2Button3)
+        Me.Guna2GroupBox2.Controls.Add(Me.txtsearchcustomer)
+        Me.Guna2GroupBox2.Controls.Add(Me.btnSearchCustomer)
         Me.Guna2GroupBox2.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Guna2GroupBox2.Font = New System.Drawing.Font("Segoe UI", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Guna2GroupBox2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
         Me.Guna2GroupBox2.Location = New System.Drawing.Point(12, 406)
         Me.Guna2GroupBox2.Name = "Guna2GroupBox2"
-        Me.Guna2GroupBox2.Size = New System.Drawing.Size(1332, 459)
+        Me.Guna2GroupBox2.Size = New System.Drawing.Size(1362, 595)
         Me.Guna2GroupBox2.TabIndex = 12
         Me.Guna2GroupBox2.Text = "Customer History"
         '
@@ -349,7 +372,7 @@ Partial Class AddCustomer
         Me.dgvCustomers.RowHeadersVisible = False
         Me.dgvCustomers.RowHeadersWidth = 51
         Me.dgvCustomers.RowTemplate.Height = 24
-        Me.dgvCustomers.Size = New System.Drawing.Size(1303, 324)
+        Me.dgvCustomers.Size = New System.Drawing.Size(800, 300)
         Me.dgvCustomers.TabIndex = 12
         Me.dgvCustomers.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
         Me.dgvCustomers.ThemeStyle.AlternatingRowsStyle.Font = Nothing
@@ -390,7 +413,7 @@ Partial Class AddCustomer
     End Sub
 
     Friend WithEvents btnAddCustomerCusfrm As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents Guna2Button2 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnDeleteCustomerCusfrm As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2HtmlLabel2 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2HtmlLabel3 As Guna.UI2.WinForms.Guna2HtmlLabel
@@ -402,9 +425,10 @@ Partial Class AddCustomer
     Friend WithEvents txtcustomerName As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Guna2GroupBox1 As Guna.UI2.WinForms.Guna2GroupBox
     Friend WithEvents txtcustomerAddress As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Guna2TextBox5 As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Guna2Button3 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents txtsearchcustomer As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents btnSearchCustomer As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2GroupBox2 As Guna.UI2.WinForms.Guna2GroupBox
     Friend WithEvents dgvCustomers As Guna.UI2.WinForms.Guna2DataGridView
-    Friend WithEvents Guna2Button4 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnUpdateCustomerCusfrm As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents txtCustomerID As Guna.UI2.WinForms.Guna2TextBox
 End Class
