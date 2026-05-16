@@ -340,7 +340,7 @@ Partial Class AddCustomer
         Me.Guna2GroupBox2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
         Me.Guna2GroupBox2.Location = New System.Drawing.Point(12, 406)
         Me.Guna2GroupBox2.Name = "Guna2GroupBox2"
-        Me.Guna2GroupBox2.Size = New System.Drawing.Size(1362, 595)
+        Me.Guna2GroupBox2.Size = New System.Drawing.Size(943, 310)
         Me.Guna2GroupBox2.TabIndex = 12
         Me.Guna2GroupBox2.Text = "Customer History"
         '
@@ -350,7 +350,7 @@ Partial Class AddCustomer
         Me.dgvCustomers.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
         DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -372,7 +372,7 @@ Partial Class AddCustomer
         Me.dgvCustomers.RowHeadersVisible = False
         Me.dgvCustomers.RowHeadersWidth = 51
         Me.dgvCustomers.RowTemplate.Height = 24
-        Me.dgvCustomers.Size = New System.Drawing.Size(800, 300)
+        Me.dgvCustomers.Size = New System.Drawing.Size(896, 184)
         Me.dgvCustomers.TabIndex = 12
         Me.dgvCustomers.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
         Me.dgvCustomers.ThemeStyle.AlternatingRowsStyle.Font = Nothing

@@ -2,44 +2,23 @@
 
 Public Class AddCustomer
     Private Sub AddCustomer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        cmbcustomerType.Items.Add("Retail (normal price)")
-        cmbcustomerType.Items.Add("Wholesale (wholesale price if set)")
-        cmbcustomerType.Items.Add("Distributor (wholesale price if set)")
-
+        UiThemeHelper.StyleGroupBox(Guna2GroupBox1)
+        UiThemeHelper.StyleGroupBox(Guna2GroupBox2)
+        UiThemeHelper.StylePrimaryButton(btnAddCustomerCusfrm)
+        UiThemeHelper.StylePrimaryButton(btnUpdateCustomerCusfrm)
+        UiThemeHelper.StylePrimaryButton(btnSearchCustomer)
+        UiThemeHelper.StyleDangerButton(btnDeleteCustomerCusfrm)
+        UiThemeHelper.ApplyGridTheme(dgvCustomers)
+        cmbcustomerType.Items.Clear()
+        cmbcustomerType.Items.AddRange(New Object() {"Retail", "Wholesale", "Distributor"})
+        Guna2GroupBox1.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
+        Guna2GroupBox2.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        dgvCustomers.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
     End Sub
 
     Private Sub btnAddCustomerCusfrm_Click(sender As Object, e As EventArgs) Handles btnAddCustomerCusfrm.Click
-        ' --- Validation checks ---
-        If String.IsNullOrWhiteSpace(txtcustomerName.Text) Then
-            MessageBox.Show("Customer name is required.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-            txtcustomerName.Focus()
-            Exit Sub
-        End If
-
-        If String.IsNullOrWhiteSpace(txtcustomerPhone.Text) OrElse txtcustomerPhone.Text.Length <> 10 OrElse Not IsNumeric(txtcustomerPhone.Text) Then
-            MessageBox.Show("Phone number must be 10 digits.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-            txtcustomerPhone.Focus()
-            Exit Sub
-        End If
-
-        If String.IsNullOrWhiteSpace(txtcustomerEmail.Text) OrElse Not txtcustomerEmail.Text.Contains("@") Then
-            MessageBox.Show("Please enter a valid email address.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-            txtcustomerEmail.Focus()
-            Exit Sub
-        End If
-
-        If String.IsNullOrWhiteSpace(txtcustomerAddress.Text) Then
-            MessageBox.Show("Address is required.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-            txtcustomerAddress.Focus()
-            Exit Sub
-        End If
-
-        If String.IsNullOrWhiteSpace(cmbcustomerType.Text) Then
-            MessageBox.Show("Please select a customer type.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-            cmbcustomerType.Focus()
-            Exit Sub
-        End If
-        ' --- If all validations pass, save customer ---
+        Dim v = ValidationHelper.ValidateCustomer(txtcustomerName.Text, txtcustomerPhone.Text, txtcustomerEmail.Text, txtcustomerAddress.Text, cmbcustomerType.Text)
+        If Not ValidationHelper.ShowIfInvalid(v) Then Return
 
         Try
             CustomerCRUD.AddCustomer(txtcustomerName.Text,
@@ -118,7 +97,18 @@ Public Class AddCustomer
             txtcustomerPhone.Text = row.Cells("cus_phone").Value.ToString()
             txtcustomerEmail.Text = row.Cells("cus_email").Value.ToString()
             txtcustomerAddress.Text = row.Cells("cus_address").Value.ToString()
-            cmbcustomerType.Text = row.Cells("cus_pricetyre").Value.ToString()
+            If dgvCustomers.Columns.Contains("price_category") Then
+                cmbcustomerType.Text = row.Cells("price_category").Value.ToString()
+            Else
+                Dim pt = row.Cells("cus_pricetyre").Value.ToString()
+                If pt.Contains("Wholesale") Then
+                    cmbcustomerType.Text = "Wholesale"
+                ElseIf pt.Contains("Distributor") Then
+                    cmbcustomerType.Text = "Distributor"
+                Else
+                    cmbcustomerType.Text = "Retail"
+                End If
+            End If
         End If
 
     End Sub

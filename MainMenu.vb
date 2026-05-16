@@ -1,169 +1,119 @@
-﻿Imports System.Web.Configuration
-
-Public Class MainMenu
+﻿Public Class MainMenu
 
     Public Property CurrentUser As String
     Public Property CurrentRole As String
 
-
     Private Sub HighlightButton(activeBtn As Guna.UI2.WinForms.Guna2Button)
-        ' Reset all buttons in the sidebar back to default
         For Each ctrl As Control In pnlSidebarPanel.Controls
             If TypeOf ctrl Is Guna.UI2.WinForms.Guna2Button Then
                 Dim btn = DirectCast(ctrl, Guna.UI2.WinForms.Guna2Button)
-                btn.FillColor = Color.Orange   ' default color
-                btn.ForeColor = Color.Black    ' default text color
+                If btn Is Guna2Button2 Then Continue For
+                btn.FillColor = Color.FromArgb(255, 107, 0)
+                btn.ForeColor = Color.Black
             End If
         Next
-
-        ' Highlight the active button
-        activeBtn.FillColor = Color.Gray
-        activeBtn.ForeColor = Color.White
+        If activeBtn IsNot Nothing Then
+            activeBtn.FillColor = Color.Gray
+            activeBtn.ForeColor = Color.White
+        End If
     End Sub
 
-    Private Sub MainMenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        lblFormTitle.Text = "Dashboard"
-        lblWelcome.Text = "Welcome, " & CurrentUser & " (" & CurrentRole & ")"
-
-        Select Case CurrentRole
-            Case "Admin"
-            ' Full access
-            Case "Manager"
-                btnStaffMgtMmenu.Enabled = False
-            Case "Cashier"
-                btnStaffMgtMmenu.Enabled = False
-                btnSupplierManagement.Enabled = False
-                btnInventoryMgtMmenu.Enabled = False
-        End Select
-    End Sub
-
-    Private Sub btnCustomer_mgt_Click(sender As Object, e As EventArgs) Handles btnCustomer_mgt.Click
-        LoadFormIntoPanel(New AddCustomer())
-        HighlightButton(btnCustomer_mgt)   ' highlight this button
-    End Sub
-    Private Sub LoadFormIntoPanel(frm As Form)
+    Public Sub OpenModule(frm As Form, title As String, Optional activeBtn As Guna.UI2.WinForms.Guna2Button = Nothing)
         pnlContent.Controls.Clear()
         frm.TopLevel = False
         frm.FormBorderStyle = FormBorderStyle.None
         frm.Dock = DockStyle.Fill
         pnlContent.Controls.Add(frm)
         frm.Show()
+        lblFormTitle.Text = title
+        HighlightButton(activeBtn)
+    End Sub
 
-        ' Update top panel label
-        lblFormTitle.Text = "Customer Management"
-        'Me.Close()
+    Private Sub MainMenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        lblFormTitle.Text = "Dashboard"
+        lblWelcome.Text = "Welcome, " & CurrentUser & " (" & CurrentRole & ")"
+        btnDashboardMmenu.Visible = False
+        btnProductMgtMmenu.Visible = False
+        btnCustomer_mgt.Visible = False
+        btnStaffMgtMmenu.Visible = False
+        btnSupplierManagement.Visible = False
+        btnSalesPOSMmenu.Visible = False
+        btnInventoryMgtMmenu.Visible = False
+        btnReportsMmenu.Visible = False
+        btnSettingMmenu.Visible = False
+        btnLogoutMmenu.Visible = True
 
+        Select Case CurrentRole
+            Case "Admin"
+                btnDashboardMmenu.Visible = True
+                btnProductMgtMmenu.Visible = True
+                btnCustomer_mgt.Visible = True
+                btnStaffMgtMmenu.Visible = True
+                btnSupplierManagement.Visible = True
+                btnSalesPOSMmenu.Visible = True
+                btnInventoryMgtMmenu.Visible = True
+                btnReportsMmenu.Visible = True
+                btnSettingMmenu.Visible = True
+            Case "Manager"
+                btnDashboardMmenu.Visible = True
+                btnProductMgtMmenu.Visible = True
+                btnCustomer_mgt.Visible = True
+                btnSupplierManagement.Visible = True
+                btnSalesPOSMmenu.Visible = True
+                btnInventoryMgtMmenu.Visible = True
+                btnReportsMmenu.Visible = True
+            Case "Cashier"
+                btnDashboardMmenu.Visible = True
+                btnCustomer_mgt.Visible = True
+                btnSalesPOSMmenu.Visible = True
+            Case Else
+                btnDashboardMmenu.Visible = True
+        End Select
 
-
-
-
+        OpenModule(New Dashboard(), "Dashboard", btnDashboardMmenu)
     End Sub
 
     Private Sub btnDashboardMmenu_Click(sender As Object, e As EventArgs) Handles btnDashboardMmenu.Click
-        LoadFormIntoPanel(New Dashboard())
-        HighlightButton(btnDashboardMmenu) ' highlight this button
-
-
-
-        ' Update top panel label
-        lblFormTitle.Text = "Dashboard"
-
+        OpenModule(New Dashboard(), "Dashboard", btnDashboardMmenu)
     End Sub
 
-    Private Sub btnProjectMgtMmenu_Click(sender As Object, e As EventArgs) Handles btnProjectMgtMmenu.Click
+    Private Sub btnCustomer_mgt_Click(sender As Object, e As EventArgs) Handles btnCustomer_mgt.Click
+        OpenModule(New AddCustomer(), "Customer Management", btnCustomer_mgt)
+    End Sub
 
-        HighlightButton(btnProjectMgtMmenu) ' highlight this button
-
-
-
-
-
-
-        ' Update top panel label
-        lblFormTitle.Text = "Product Management"
-
+    Private Sub btnProductMgtMmenu_Click(sender As Object, e As EventArgs) Handles btnProductMgtMmenu.Click
+        OpenModule(New ProductMgtFrm(), "Product Management", btnProductMgtMmenu)
     End Sub
 
     Private Sub btnStaffMgtMmenu_Click(sender As Object, e As EventArgs) Handles btnStaffMgtMmenu.Click
-
-        HighlightButton(btnStaffMgtMmenu) ' highlight this button
-
-        ' Update top panel label
-        lblFormTitle.Text = "Staff Management"
-
+        OpenModule(New StaffMgtFrm(), "Staff Management", btnStaffMgtMmenu)
     End Sub
 
     Private Sub btnSalesPOSMmenu_Click(sender As Object, e As EventArgs) Handles btnSalesPOSMmenu.Click
-
-        HighlightButton(btnSalesPOSMmenu) ' highlight this button
-
-        ' Update top panel label
-        lblFormTitle.Text = "Sales (POS)"
+        OpenModule(New SalesPOS(), "Sales (POS)", btnSalesPOSMmenu)
     End Sub
 
     Private Sub btnInventoryMgtMmenu_Click(sender As Object, e As EventArgs) Handles btnInventoryMgtMmenu.Click
-
-        HighlightButton(btnInventoryMgtMmenu) ' highlight this button
-
-
-        ' Update top panel label
-        lblFormTitle.Text = "Inventory Management"
+        OpenModule(New InventoryMgtFrm(), "Inventory Management", btnInventoryMgtMmenu)
     End Sub
 
     Private Sub btnSupplierManagement_Click(sender As Object, e As EventArgs) Handles btnSupplierManagement.Click
+        OpenModule(New AddSupplierMgt(), "Supplier Management", btnSupplierManagement)
+    End Sub
 
-        ' Update top panel label
-        lblFormTitle.Text = "Supplier Management"
+    Private Sub btnReportsMmenu_Click(sender As Object, e As EventArgs) Handles btnReportsMmenu.Click
+        OpenModule(New ReportsFrm(), "Reports", btnReportsMmenu)
     End Sub
 
     Private Sub btnSettingMmenu_Click(sender As Object, e As EventArgs) Handles btnSettingMmenu.Click
-
-        ' Update top panel label
-        lblFormTitle.Text = "Settings"
+        OpenModule(New Settings(), "Settings", btnSettingMmenu)
     End Sub
 
     Private Sub btnLogoutMmenu_Click(sender As Object, e As EventArgs) Handles btnLogoutMmenu.Click
-
-        ' Update top panel label
-        lblFormTitle.Text = "Logout"
-
-        ' ✅ Step 1: Confirm logout
-        Dim result As DialogResult = MessageBox.Show("Are you sure you want to log out?",
-                                                     "Confirm Logout",
-                                                     MessageBoxButtons.YesNo,
-                                                     MessageBoxIcon.Question)
-
-        If result = DialogResult.Yes Then
-            ' ✅ Step 2: Optional validation – check if user is logged in
-            If String.IsNullOrEmpty(CurrentUser) OrElse String.IsNullOrEmpty(CurrentRole) Then
-                MessageBox.Show("No active session found. Returning to login screen.",
-                                "Logout",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Information)
-            Else
-                MessageBox.Show("Goodbye, " & CurrentUser & " (" & CurrentRole & ")",
-                                "Logout Successful",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Information)
-            End If
-
-            ' ✅ Step 3: Redirect to login form
-            Dim loginForm As New LoginFrm()
-            loginForm.Show()
-
-            ' ✅ Step 4: Close MainMenu
-            Me.Close()
-        End If
-
-
-
-
-
-
-
-
-
-
-
+        If MessageBox.Show("Are you sure you want to log out?", "Confirm Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question) <> DialogResult.Yes Then Return
+        Dim loginForm As New LoginFrm()
+        loginForm.Show()
+        Me.Close()
     End Sub
+
 End Class

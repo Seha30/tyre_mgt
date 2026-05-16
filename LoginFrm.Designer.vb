@@ -1,156 +1,206 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class LoginFrm
     Inherits System.Windows.Forms.Form
 
-    'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
-    Protected Overrides Sub Dispose(ByVal disposing As Boolean)
+    <System.Diagnostics.DebuggerNonUserCode()>
+    Protected Overrides Sub Dispose(disposing As Boolean)
         Try
-            If disposing AndAlso components IsNot Nothing Then
-                components.Dispose()
-            End If
+            If disposing AndAlso components IsNot Nothing Then components.Dispose()
         Finally
             MyBase.Dispose(disposing)
         End Try
     End Sub
 
-    'Required by the Windows Form Designer
     Private components As System.ComponentModel.IContainer
 
-    'NOTE: The following procedure is required by the Windows Form Designer
-    'It can be modified using the Windows Form Designer.  
-    'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.btnLogin = New System.Windows.Forms.Button()
+        Me.pnlBrand = New Guna.UI2.WinForms.Guna2Panel()
+        Me.lblBrandSubtitle = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.lblBrandTitle = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.pnlLoginCard = New Guna.UI2.WinForms.Guna2Panel()
+        Me.lblLoginTitle = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.lblUsername = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.lblPassword = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.txtlogusername = New Guna.UI2.WinForms.Guna2TextBox()
         Me.txtlogpword = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.cmblogrole = New Guna.UI2.WinForms.Guna2ComboBox()
-        Me.Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.Guna2HtmlLabel3 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.btnLogin = New Guna.UI2.WinForms.Guna2Button()
+        Me.lblFooter = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.pnlBrand.SuspendLayout()
+        Me.pnlLoginCard.SuspendLayout()
         Me.SuspendLayout()
         '
-        'btnLogin
+        'pnlBrand
         '
-        Me.btnLogin.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogin.Location = New System.Drawing.Point(151, 302)
-        Me.btnLogin.Name = "btnLogin"
-        Me.btnLogin.Size = New System.Drawing.Size(75, 36)
-        Me.btnLogin.TabIndex = 0
-        Me.btnLogin.Text = "Login"
-        Me.btnLogin.UseVisualStyleBackColor = True
+        Me.pnlBrand.Controls.Add(Me.lblBrandSubtitle)
+        Me.pnlBrand.Controls.Add(Me.lblBrandTitle)
+        Me.pnlBrand.Dock = System.Windows.Forms.DockStyle.Left
+        Me.pnlBrand.FillColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.pnlBrand.Location = New System.Drawing.Point(0, 0)
+        Me.pnlBrand.Name = "pnlBrand"
+        Me.pnlBrand.Size = New System.Drawing.Size(420, 520)
+        Me.pnlBrand.TabIndex = 0
+        '
+        'lblBrandSubtitle
+        '
+        Me.lblBrandSubtitle.BackColor = System.Drawing.Color.Transparent
+        Me.lblBrandSubtitle.Font = New System.Drawing.Font("Segoe UI", 11.0!)
+        Me.lblBrandSubtitle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.lblBrandSubtitle.Location = New System.Drawing.Point(40, 200)
+        Me.lblBrandSubtitle.Name = "lblBrandSubtitle"
+        Me.lblBrandSubtitle.Size = New System.Drawing.Size(340, 120)
+        Me.lblBrandSubtitle.TabIndex = 1
+        Me.lblBrandSubtitle.Text = "Inventory & Service Management" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Piliyandala • Tyres • POS • Stock"
+        '
+        'lblBrandTitle
+        '
+        Me.lblBrandTitle.BackColor = System.Drawing.Color.Transparent
+        Me.lblBrandTitle.Font = New System.Drawing.Font("Segoe UI", 22.0!, System.Drawing.FontStyle.Bold)
+        Me.lblBrandTitle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.lblBrandTitle.Location = New System.Drawing.Point(40, 120)
+        Me.lblBrandTitle.Name = "lblBrandTitle"
+        Me.lblBrandTitle.Size = New System.Drawing.Size(340, 70)
+        Me.lblBrandTitle.TabIndex = 0
+        Me.lblBrandTitle.Text = "S & N Tyre Center"
+        '
+        'pnlLoginCard
+        '
+        Me.pnlLoginCard.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.pnlLoginCard.BackColor = System.Drawing.Color.White
+        Me.pnlLoginCard.BorderRadius = 16
+        Me.pnlLoginCard.Controls.Add(Me.lblFooter)
+        Me.pnlLoginCard.Controls.Add(Me.btnLogin)
+        Me.pnlLoginCard.Controls.Add(Me.txtlogpword)
+        Me.pnlLoginCard.Controls.Add(Me.txtlogusername)
+        Me.pnlLoginCard.Controls.Add(Me.lblPassword)
+        Me.pnlLoginCard.Controls.Add(Me.lblUsername)
+        Me.pnlLoginCard.Controls.Add(Me.lblLoginTitle)
+        Me.pnlLoginCard.FillColor = System.Drawing.Color.White
+        Me.pnlLoginCard.Location = New System.Drawing.Point(480, 60)
+        Me.pnlLoginCard.Name = "pnlLoginCard"
+        Me.pnlLoginCard.ShadowDecoration.Enabled = True
+        Me.pnlLoginCard.Size = New System.Drawing.Size(380, 400)
+        Me.pnlLoginCard.TabIndex = 1
+        '
+        'lblLoginTitle
+        '
+        Me.lblLoginTitle.BackColor = System.Drawing.Color.Transparent
+        Me.lblLoginTitle.Font = New System.Drawing.Font("Segoe UI", 16.0!, System.Drawing.FontStyle.Bold)
+        Me.lblLoginTitle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.lblLoginTitle.Location = New System.Drawing.Point(32, 28)
+        Me.lblLoginTitle.Name = "lblLoginTitle"
+        Me.lblLoginTitle.Size = New System.Drawing.Size(200, 36)
+        Me.lblLoginTitle.TabIndex = 0
+        Me.lblLoginTitle.Text = "Staff Login"
+        '
+        'lblUsername
+        '
+        Me.lblUsername.BackColor = System.Drawing.Color.Transparent
+        Me.lblUsername.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.lblUsername.Location = New System.Drawing.Point(32, 88)
+        Me.lblUsername.Name = "lblUsername"
+        Me.lblUsername.Size = New System.Drawing.Size(100, 22)
+        Me.lblUsername.TabIndex = 1
+        Me.lblUsername.Text = "Username"
+        '
+        'lblPassword
+        '
+        Me.lblPassword.BackColor = System.Drawing.Color.Transparent
+        Me.lblPassword.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.lblPassword.Location = New System.Drawing.Point(32, 178)
+        Me.lblPassword.Name = "lblPassword"
+        Me.lblPassword.Size = New System.Drawing.Size(100, 22)
+        Me.lblPassword.TabIndex = 2
+        Me.lblPassword.Text = "Password"
         '
         'txtlogusername
         '
+        Me.txtlogusername.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtlogusername.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtlogusername.DefaultText = ""
-        Me.txtlogusername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.txtlogusername.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.txtlogusername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtlogusername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtlogusername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtlogusername.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.txtlogusername.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtlogusername.Location = New System.Drawing.Point(129, 85)
+        Me.txtlogusername.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.txtlogusername.Location = New System.Drawing.Point(32, 114)
         Me.txtlogusername.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtlogusername.Name = "txtlogusername"
-        Me.txtlogusername.PlaceholderText = ""
+        Me.txtlogusername.PlaceholderText = "Enter username"
         Me.txtlogusername.SelectedText = ""
-        Me.txtlogusername.Size = New System.Drawing.Size(229, 48)
+        Me.txtlogusername.Size = New System.Drawing.Size(316, 40)
         Me.txtlogusername.TabIndex = 3
         '
         'txtlogpword
         '
+        Me.txtlogpword.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtlogpword.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtlogpword.DefaultText = ""
-        Me.txtlogpword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.txtlogpword.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.txtlogpword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtlogpword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtlogpword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtlogpword.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.txtlogpword.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtlogpword.Location = New System.Drawing.Point(129, 162)
+        Me.txtlogpword.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.txtlogpword.Location = New System.Drawing.Point(32, 204)
         Me.txtlogpword.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtlogpword.Name = "txtlogpword"
         Me.txtlogpword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtlogpword.PlaceholderText = ""
+        Me.txtlogpword.PlaceholderText = "Enter password"
         Me.txtlogpword.SelectedText = ""
-        Me.txtlogpword.Size = New System.Drawing.Size(229, 48)
-        Me.txtlogpword.TabIndex = 3
+        Me.txtlogpword.Size = New System.Drawing.Size(316, 40)
+        Me.txtlogpword.TabIndex = 4
         '
-        'Guna2HtmlLabel1
+        'btnLogin
         '
-        Me.Guna2HtmlLabel1.AutoSize = False
-        Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(19, 233)
-        Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
-        Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(57, 36)
-        Me.Guna2HtmlLabel1.TabIndex = 4
-        Me.Guna2HtmlLabel1.Text = "Role"
+        Me.btnLogin.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnLogin.BorderRadius = 12
+        Me.btnLogin.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnLogin.Font = New System.Drawing.Font("Segoe UI Semibold", 11.0!, System.Drawing.FontStyle.Bold)
+        Me.btnLogin.ForeColor = System.Drawing.Color.White
+        Me.btnLogin.Location = New System.Drawing.Point(32, 270)
+        Me.btnLogin.Name = "btnLogin"
+        Me.btnLogin.Size = New System.Drawing.Size(316, 48)
+        Me.btnLogin.TabIndex = 5
+        Me.btnLogin.Text = "Sign In"
         '
-        'cmblogrole
+        'lblFooter
         '
-        Me.cmblogrole.BackColor = System.Drawing.Color.Transparent
-        Me.cmblogrole.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.cmblogrole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cmblogrole.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.cmblogrole.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.cmblogrole.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.cmblogrole.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.cmblogrole.ItemHeight = 30
-        Me.cmblogrole.Location = New System.Drawing.Point(129, 233)
-        Me.cmblogrole.Name = "cmblogrole"
-        Me.cmblogrole.Size = New System.Drawing.Size(229, 36)
-        Me.cmblogrole.TabIndex = 5
-        '
-        'Guna2HtmlLabel2
-        '
-        Me.Guna2HtmlLabel2.AutoSize = False
-        Me.Guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2HtmlLabel2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(19, 172)
-        Me.Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
-        Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(104, 20)
-        Me.Guna2HtmlLabel2.TabIndex = 6
-        Me.Guna2HtmlLabel2.Text = "Password"
-        '
-        'Guna2HtmlLabel3
-        '
-        Me.Guna2HtmlLabel3.AutoSize = False
-        Me.Guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2HtmlLabel3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2HtmlLabel3.Location = New System.Drawing.Point(19, 100)
-        Me.Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
-        Me.Guna2HtmlLabel3.Size = New System.Drawing.Size(95, 33)
-        Me.Guna2HtmlLabel3.TabIndex = 6
-        Me.Guna2HtmlLabel3.Text = "Username"
+        Me.lblFooter.BackColor = System.Drawing.Color.Transparent
+        Me.lblFooter.Font = New System.Drawing.Font("Segoe UI", 8.25!)
+        Me.lblFooter.ForeColor = System.Drawing.Color.Gray
+        Me.lblFooter.Location = New System.Drawing.Point(32, 340)
+        Me.lblFooter.Name = "lblFooter"
+        Me.lblFooter.Size = New System.Drawing.Size(316, 40)
+        Me.lblFooter.TabIndex = 6
+        Me.lblFooter.Text = "ICT 222 • Sabaragamuwa University" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "admin/admin123  |  manager/manager789  |  cashier/cash456"
         '
         'LoginFrm
         '
+        Me.AcceptButton = Me.btnLogin
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(370, 450)
-        Me.Controls.Add(Me.Guna2HtmlLabel3)
-        Me.Controls.Add(Me.Guna2HtmlLabel2)
-        Me.Controls.Add(Me.cmblogrole)
-        Me.Controls.Add(Me.Guna2HtmlLabel1)
-        Me.Controls.Add(Me.txtlogpword)
-        Me.Controls.Add(Me.txtlogusername)
-        Me.Controls.Add(Me.btnLogin)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(250, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(920, 520)
+        Me.Controls.Add(Me.pnlLoginCard)
+        Me.Controls.Add(Me.pnlBrand)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
         Me.Name = "LoginFrm"
-        Me.Text = "LoginFrm"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "S & N Tyre Center - Login"
+        Me.pnlBrand.ResumeLayout(False)
+        Me.pnlLoginCard.ResumeLayout(False)
+        Me.pnlLoginCard.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents btnLogin As Button
+    Friend WithEvents pnlBrand As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents lblBrandTitle As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents lblBrandSubtitle As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents pnlLoginCard As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents lblLoginTitle As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents lblUsername As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents lblPassword As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents txtlogusername As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents txtlogpword As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents cmblogrole As Guna.UI2.WinForms.Guna2ComboBox
-    Friend WithEvents Guna2HtmlLabel2 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2HtmlLabel3 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents btnLogin As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents lblFooter As Guna.UI2.WinForms.Guna2HtmlLabel
 End Class

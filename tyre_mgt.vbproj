@@ -151,13 +151,18 @@
     <Compile Include="AddCustomerControl.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="AddSupplierFrm.Designer.vb">
-      <DependentUpon>AddSupplierFrm.vb</DependentUpon>
+    <Compile Include="AddSupplierMgt.Designer.vb">
+      <DependentUpon>AddSupplierMgt.vb</DependentUpon>
     </Compile>
-    <Compile Include="AddSupplierFrm.vb">
+    <Compile Include="AddSupplierMgt.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CustomerCRUD.vb" />
+    <Compile Include="ItemCRUD.vb" />
+    <Compile Include="SupplierCRUD.vb" />
+    <Compile Include="StaffCRUD.vb" />
+    <Compile Include="UiThemeHelper.vb" />
+    <Compile Include="ValidationHelper.vb" />
     <Compile Include="Dashboard.Designer.vb">
       <DependentUpon>Dashboard.vb</DependentUpon>
     </Compile>
@@ -170,6 +175,12 @@
     </Compile>
     <Compile Include="Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventoryMgtFrm.Designer.vb">
+      <DependentUpon>InventoryMgtFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryMgtFrm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LoginFrm.Designer.vb">
@@ -200,6 +211,36 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="ProductMgtFrm.Designer.vb">
+      <DependentUpon>ProductMgtFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ProductMgtFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalesPOS.Designer.vb">
+      <DependentUpon>SalesPOS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SalesPOS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings.Designer.vb">
+      <DependentUpon>Settings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffMgtFrm.Designer.vb">
+      <DependentUpon>StaffMgtFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="StaffMgtFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportsFrm.Designer.vb">
+      <DependentUpon>ReportsFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportsFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AddCustomer.resx">
@@ -207,9 +248,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddCustomerControl.resx">
       <DependentUpon>AddCustomerControl.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AddSupplierFrm.resx">
-      <DependentUpon>AddSupplierFrm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.vb</DependentUpon>

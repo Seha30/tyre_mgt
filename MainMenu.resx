@@ -348,10 +348,10 @@
         YII=
 </value>
   </data>
-  <data name="btnProjectMgtMmenu.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnProductMgtMmenu.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAACCFJREFUeF7tncGLXEUQh4sQREIQCYuEIBJEPHgI+QM8ieQsEmSRICIiIiJhkRxE
+        vAAADrwBlbxySQAACCFJREFUeF7tncGLXEUQh4sQREIQCYuEIBJEPHgI+QM8ieQsEmSRICIiIiJhkRxE
         BJEQJIiIiOQvCJKTeBYP4kGC5CBBJIgEEfEQRCR4CBKpoXvp/VX1m3nzuvtV9+vDB6F2uqr2/b5shreT
         Gbp//z51losotAwRHSGiZ4loj4g+I6KrDv4z1/hrR/Bcy4hCaxDRYSJ6joi+IqJ/iYiLQ/Bj+LF85jD2
         aw1RaAUX/MtEdEsJeVP4LPdoVgRRqB0X/EsTg0e4F/dsTgRRqJVMwSPNiSAKtVEoeKQZEUShFmYKHqle
