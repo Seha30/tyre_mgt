@@ -267,6 +267,9 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="ProductMgtFrm.resx">
+      <DependentUpon>ProductMgtFrm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReportsFrm.resx">
       <DependentUpon>ReportsFrm.vb</DependentUpon>
     </EmbeddedResource>

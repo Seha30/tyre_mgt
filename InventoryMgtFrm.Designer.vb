@@ -15,9 +15,9 @@ Partial Class InventoryMgtFrm
 
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.lblTitle = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.grpAdjust = New Guna.UI2.WinForms.Guna2GroupBox()
         Me.btnApplyAdjustment = New Guna.UI2.WinForms.Guna2Button()
@@ -86,10 +86,11 @@ Partial Class InventoryMgtFrm
         '
         'lblSelectedItem
         '
+        Me.lblSelectedItem.AutoSize = False
         Me.lblSelectedItem.BackColor = System.Drawing.Color.Transparent
         Me.lblSelectedItem.Location = New System.Drawing.Point(16, 88)
         Me.lblSelectedItem.Name = "lblSelectedItem"
-        Me.lblSelectedItem.Size = New System.Drawing.Size(172, 18)
+        Me.lblSelectedItem.Size = New System.Drawing.Size(418, 29)
         Me.lblSelectedItem.TabIndex = 1
         Me.lblSelectedItem.Text = "Selected: (click a row below)"
         '
@@ -98,7 +99,7 @@ Partial Class InventoryMgtFrm
         Me.txtAdjRemarks.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtAdjRemarks.DefaultText = ""
         Me.txtAdjRemarks.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.txtAdjRemarks.Location = New System.Drawing.Point(500, 44)
+        Me.txtAdjRemarks.Location = New System.Drawing.Point(588, 44)
         Me.txtAdjRemarks.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtAdjRemarks.Name = "txtAdjRemarks"
         Me.txtAdjRemarks.PlaceholderText = ""
@@ -108,10 +109,12 @@ Partial Class InventoryMgtFrm
         '
         'lblRemarks
         '
+        Me.lblRemarks.AutoSize = False
         Me.lblRemarks.BackColor = System.Drawing.Color.Transparent
-        Me.lblRemarks.Location = New System.Drawing.Point(430, 48)
+        Me.lblRemarks.ForeColor = System.Drawing.Color.Black
+        Me.lblRemarks.Location = New System.Drawing.Point(495, 48)
         Me.lblRemarks.Name = "lblRemarks"
-        Me.lblRemarks.Size = New System.Drawing.Size(58, 18)
+        Me.lblRemarks.Size = New System.Drawing.Size(87, 36)
         Me.lblRemarks.TabIndex = 3
         Me.lblRemarks.Text = "Remarks"
         '
@@ -120,7 +123,7 @@ Partial Class InventoryMgtFrm
         Me.txtAdjQty.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtAdjQty.DefaultText = ""
         Me.txtAdjQty.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.txtAdjQty.Location = New System.Drawing.Point(330, 44)
+        Me.txtAdjQty.Location = New System.Drawing.Point(390, 44)
         Me.txtAdjQty.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtAdjQty.Name = "txtAdjQty"
         Me.txtAdjQty.PlaceholderText = ""
@@ -130,10 +133,12 @@ Partial Class InventoryMgtFrm
         '
         'lblAdjQty
         '
+        Me.lblAdjQty.AutoSize = False
         Me.lblAdjQty.BackColor = System.Drawing.Color.Transparent
-        Me.lblAdjQty.Location = New System.Drawing.Point(250, 48)
+        Me.lblAdjQty.ForeColor = System.Drawing.Color.Black
+        Me.lblAdjQty.Location = New System.Drawing.Point(275, 48)
         Me.lblAdjQty.Name = "lblAdjQty"
-        Me.lblAdjQty.Size = New System.Drawing.Size(49, 18)
+        Me.lblAdjQty.Size = New System.Drawing.Size(126, 36)
         Me.lblAdjQty.TabIndex = 5
         Me.lblAdjQty.Text = "Qty (+/-)"
         '
@@ -153,10 +158,12 @@ Partial Class InventoryMgtFrm
         '
         'lblReason
         '
+        Me.lblReason.AutoSize = False
         Me.lblReason.BackColor = System.Drawing.Color.Transparent
-        Me.lblReason.Location = New System.Drawing.Point(16, 48)
+        Me.lblReason.ForeColor = System.Drawing.Color.Black
+        Me.lblReason.Location = New System.Drawing.Point(3, 48)
         Me.lblReason.Name = "lblReason"
-        Me.lblReason.Size = New System.Drawing.Size(51, 18)
+        Me.lblReason.Size = New System.Drawing.Size(81, 28)
         Me.lblReason.TabIndex = 7
         Me.lblReason.Text = "Reason"
         '
@@ -194,23 +201,23 @@ Partial Class InventoryMgtFrm
         'dgvStock
         '
         Me.dgvStock.AllowUserToAddRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
-        Me.dgvStock.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle13.BackColor = System.Drawing.Color.White
+        Me.dgvStock.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle13
         Me.dgvStock.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.dgvStock.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        DataGridViewCellStyle14.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.dgvStock.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle14
         Me.dgvStock.ColumnHeadersHeight = 29
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvStock.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle15.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle15.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvStock.DefaultCellStyle = DataGridViewCellStyle15
         Me.dgvStock.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.dgvStock.Location = New System.Drawing.Point(16, 96)
         Me.dgvStock.Name = "dgvStock"
@@ -287,7 +294,6 @@ Partial Class InventoryMgtFrm
         Me.Controls.Add(Me.lblTitle)
         Me.Name = "InventoryMgtFrm"
         Me.grpAdjust.ResumeLayout(False)
-        Me.grpAdjust.PerformLayout()
         Me.grpStock.ResumeLayout(False)
         CType(Me.dgvStock, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
