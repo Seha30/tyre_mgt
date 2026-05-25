@@ -109,6 +109,7 @@ Public Class SalesPOS
     End Sub
 
     Private Sub RecalcTotals()
+        If cart Is Nothing Then Exit Sub
         Dim subtotal As Decimal = 0
         For Each row As DataRow In cart.Rows
             subtotal += CDec(row("line_total"))

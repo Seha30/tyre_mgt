@@ -1,9 +1,6 @@
 Imports System.Text.RegularExpressions
-
-''' <summary>
 ''' Shared input validation for S &amp; N Tyre Center application.
-''' Rules mirror database constraints documented in README.md.
-''' </summary>
+
 Public Module ValidationHelper
 
     Public Enum ValidationResultKind

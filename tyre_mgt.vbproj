@@ -252,6 +252,9 @@
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InventoryMgtFrm.resx">
+      <DependentUpon>InventoryMgtFrm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginFrm.resx">
       <DependentUpon>LoginFrm.vb</DependentUpon>
     </EmbeddedResource>
@@ -263,6 +266,15 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportsFrm.resx">
+      <DependentUpon>ReportsFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesPOS.resx">
+      <DependentUpon>SalesPOS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffMgtFrm.resx">
+      <DependentUpon>StaffMgtFrm.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
