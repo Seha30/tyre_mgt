@@ -56,7 +56,7 @@ Partial Class Dashboard
         Me.lblTitle.Font = New System.Drawing.Font("Segoe UI", 16.0!, System.Drawing.FontStyle.Bold)
         Me.lblTitle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.lblTitle.Location = New System.Drawing.Point(0, 0)
-        Me.lblTitle.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.lblTitle.Margin = New System.Windows.Forms.Padding(2)
         Me.lblTitle.Name = "lblTitle"
         Me.lblTitle.Padding = New System.Windows.Forms.Padding(9, 6, 0, 0)
         Me.lblTitle.Size = New System.Drawing.Size(825, 38)
@@ -73,7 +73,7 @@ Partial Class Dashboard
         Me.pnlStats.Controls.Add(Me.cardCustomers)
         Me.pnlStats.FillColor = System.Drawing.Color.Transparent
         Me.pnlStats.Location = New System.Drawing.Point(9, 46)
-        Me.pnlStats.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.pnlStats.Margin = New System.Windows.Forms.Padding(2)
         Me.pnlStats.Name = "pnlStats"
         Me.pnlStats.Size = New System.Drawing.Size(807, 89)
         Me.pnlStats.TabIndex = 1
@@ -85,7 +85,7 @@ Partial Class Dashboard
         Me.cardLowStock.Controls.Add(Me.lblLowStockCap)
         Me.cardLowStock.FillColor = System.Drawing.Color.FromArgb(CType(CType(220, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(69, Byte), Integer))
         Me.cardLowStock.Location = New System.Drawing.Point(608, 6)
-        Me.cardLowStock.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cardLowStock.Margin = New System.Windows.Forms.Padding(2)
         Me.cardLowStock.Name = "cardLowStock"
         Me.cardLowStock.Size = New System.Drawing.Size(188, 76)
         Me.cardLowStock.TabIndex = 3
@@ -96,7 +96,7 @@ Partial Class Dashboard
         Me.lblLowStockVal.Font = New System.Drawing.Font("Segoe UI", 20.0!, System.Drawing.FontStyle.Bold)
         Me.lblLowStockVal.ForeColor = System.Drawing.Color.White
         Me.lblLowStockVal.Location = New System.Drawing.Point(12, 10)
-        Me.lblLowStockVal.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.lblLowStockVal.Margin = New System.Windows.Forms.Padding(2)
         Me.lblLowStockVal.Name = "lblLowStockVal"
         Me.lblLowStockVal.Size = New System.Drawing.Size(19, 39)
         Me.lblLowStockVal.TabIndex = 0
@@ -109,7 +109,7 @@ Partial Class Dashboard
         Me.lblLowStockCap.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.lblLowStockCap.ForeColor = System.Drawing.Color.White
         Me.lblLowStockCap.Location = New System.Drawing.Point(12, 53)
-        Me.lblLowStockCap.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.lblLowStockCap.Margin = New System.Windows.Forms.Padding(2)
         Me.lblLowStockCap.Name = "lblLowStockCap"
         Me.lblLowStockCap.Size = New System.Drawing.Size(145, 17)
         Me.lblLowStockCap.TabIndex = 1
@@ -122,7 +122,7 @@ Partial Class Dashboard
         Me.cardTodaySales.Controls.Add(Me.lblTodaySalesCap)
         Me.cardTodaySales.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.cardTodaySales.Location = New System.Drawing.Point(408, 6)
-        Me.cardTodaySales.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cardTodaySales.Margin = New System.Windows.Forms.Padding(2)
         Me.cardTodaySales.Name = "cardTodaySales"
         Me.cardTodaySales.Size = New System.Drawing.Size(188, 76)
         Me.cardTodaySales.TabIndex = 2
@@ -133,7 +133,7 @@ Partial Class Dashboard
         Me.lblTodaySalesVal.Font = New System.Drawing.Font("Segoe UI", 16.0!, System.Drawing.FontStyle.Bold)
         Me.lblTodaySalesVal.ForeColor = System.Drawing.Color.White
         Me.lblTodaySalesVal.Location = New System.Drawing.Point(12, 10)
-        Me.lblTodaySalesVal.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.lblTodaySalesVal.Margin = New System.Windows.Forms.Padding(2)
         Me.lblTodaySalesVal.Name = "lblTodaySalesVal"
         Me.lblTodaySalesVal.Size = New System.Drawing.Size(80, 32)
         Me.lblTodaySalesVal.TabIndex = 0
@@ -146,7 +146,7 @@ Partial Class Dashboard
         Me.lblTodaySalesCap.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.lblTodaySalesCap.ForeColor = System.Drawing.Color.White
         Me.lblTodaySalesCap.Location = New System.Drawing.Point(19, 53)
-        Me.lblTodaySalesCap.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.lblTodaySalesCap.Margin = New System.Windows.Forms.Padding(2)
         Me.lblTodaySalesCap.Name = "lblTodaySalesCap"
         Me.lblTodaySalesCap.Size = New System.Drawing.Size(112, 17)
         Me.lblTodaySalesCap.TabIndex = 1
@@ -159,7 +159,7 @@ Partial Class Dashboard
         Me.cardProducts.Controls.Add(Me.lblProductsCap)
         Me.cardProducts.FillColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.cardProducts.Location = New System.Drawing.Point(208, 6)
-        Me.cardProducts.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cardProducts.Margin = New System.Windows.Forms.Padding(2)
         Me.cardProducts.Name = "cardProducts"
         Me.cardProducts.Size = New System.Drawing.Size(188, 76)
         Me.cardProducts.TabIndex = 1
@@ -170,7 +170,7 @@ Partial Class Dashboard
         Me.lblProductsVal.Font = New System.Drawing.Font("Segoe UI", 20.0!, System.Drawing.FontStyle.Bold)
         Me.lblProductsVal.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.lblProductsVal.Location = New System.Drawing.Point(12, 10)
-        Me.lblProductsVal.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.lblProductsVal.Margin = New System.Windows.Forms.Padding(2)
         Me.lblProductsVal.Name = "lblProductsVal"
         Me.lblProductsVal.Size = New System.Drawing.Size(19, 39)
         Me.lblProductsVal.TabIndex = 0
@@ -183,7 +183,7 @@ Partial Class Dashboard
         Me.lblProductsCap.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.lblProductsCap.ForeColor = System.Drawing.Color.White
         Me.lblProductsCap.Location = New System.Drawing.Point(12, 53)
-        Me.lblProductsCap.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.lblProductsCap.Margin = New System.Windows.Forms.Padding(2)
         Me.lblProductsCap.Name = "lblProductsCap"
         Me.lblProductsCap.Size = New System.Drawing.Size(133, 17)
         Me.lblProductsCap.TabIndex = 1
@@ -196,7 +196,7 @@ Partial Class Dashboard
         Me.cardCustomers.Controls.Add(Me.lblCustomersCap)
         Me.cardCustomers.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.cardCustomers.Location = New System.Drawing.Point(9, 6)
-        Me.cardCustomers.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cardCustomers.Margin = New System.Windows.Forms.Padding(2)
         Me.cardCustomers.Name = "cardCustomers"
         Me.cardCustomers.Size = New System.Drawing.Size(188, 76)
         Me.cardCustomers.TabIndex = 0
@@ -207,7 +207,7 @@ Partial Class Dashboard
         Me.lblCustomersVal.Font = New System.Drawing.Font("Segoe UI", 20.0!, System.Drawing.FontStyle.Bold)
         Me.lblCustomersVal.ForeColor = System.Drawing.Color.Black
         Me.lblCustomersVal.Location = New System.Drawing.Point(12, 10)
-        Me.lblCustomersVal.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.lblCustomersVal.Margin = New System.Windows.Forms.Padding(2)
         Me.lblCustomersVal.Name = "lblCustomersVal"
         Me.lblCustomersVal.Size = New System.Drawing.Size(19, 39)
         Me.lblCustomersVal.TabIndex = 0
@@ -220,7 +220,7 @@ Partial Class Dashboard
         Me.lblCustomersCap.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.lblCustomersCap.ForeColor = System.Drawing.Color.Black
         Me.lblCustomersCap.Location = New System.Drawing.Point(12, 53)
-        Me.lblCustomersCap.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.lblCustomersCap.Margin = New System.Windows.Forms.Padding(2)
         Me.lblCustomersCap.Name = "lblCustomersCap"
         Me.lblCustomersCap.Size = New System.Drawing.Size(160, 17)
         Me.lblCustomersCap.TabIndex = 1
@@ -237,7 +237,7 @@ Partial Class Dashboard
         Me.grpLowStock.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!, System.Drawing.FontStyle.Bold)
         Me.grpLowStock.ForeColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
         Me.grpLowStock.Location = New System.Drawing.Point(9, 146)
-        Me.grpLowStock.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.grpLowStock.Margin = New System.Windows.Forms.Padding(2)
         Me.grpLowStock.Name = "grpLowStock"
         Me.grpLowStock.Size = New System.Drawing.Size(525, 341)
         Me.grpLowStock.TabIndex = 2
@@ -268,7 +268,7 @@ Partial Class Dashboard
         Me.dgvLowStock.DefaultCellStyle = DataGridViewCellStyle3
         Me.dgvLowStock.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.dgvLowStock.Location = New System.Drawing.Point(12, 58)
-        Me.dgvLowStock.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.dgvLowStock.Margin = New System.Windows.Forms.Padding(2)
         Me.dgvLowStock.Name = "dgvLowStock"
         Me.dgvLowStock.ReadOnly = True
         Me.dgvLowStock.RowHeadersVisible = False
@@ -304,7 +304,7 @@ Partial Class Dashboard
         Me.btnRefreshDashboard.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold)
         Me.btnRefreshDashboard.ForeColor = System.Drawing.Color.White
         Me.btnRefreshDashboard.Location = New System.Drawing.Point(12, 26)
-        Me.btnRefreshDashboard.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnRefreshDashboard.Margin = New System.Windows.Forms.Padding(2)
         Me.btnRefreshDashboard.Name = "btnRefreshDashboard"
         Me.btnRefreshDashboard.Size = New System.Drawing.Size(105, 29)
         Me.btnRefreshDashboard.TabIndex = 0
@@ -321,7 +321,7 @@ Partial Class Dashboard
         Me.grpQuickActions.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!, System.Drawing.FontStyle.Bold)
         Me.grpQuickActions.ForeColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
         Me.grpQuickActions.Location = New System.Drawing.Point(546, 146)
-        Me.grpQuickActions.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.grpQuickActions.Margin = New System.Windows.Forms.Padding(2)
         Me.grpQuickActions.Name = "grpQuickActions"
         Me.grpQuickActions.Size = New System.Drawing.Size(270, 341)
         Me.grpQuickActions.TabIndex = 3
@@ -336,7 +336,7 @@ Partial Class Dashboard
         Me.btnQuickReports.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!, System.Drawing.FontStyle.Bold)
         Me.btnQuickReports.ForeColor = System.Drawing.Color.Black
         Me.btnQuickReports.Location = New System.Drawing.Point(18, 143)
-        Me.btnQuickReports.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnQuickReports.Margin = New System.Windows.Forms.Padding(2)
         Me.btnQuickReports.Name = "btnQuickReports"
         Me.btnQuickReports.Size = New System.Drawing.Size(234, 39)
         Me.btnQuickReports.TabIndex = 2
@@ -351,7 +351,7 @@ Partial Class Dashboard
         Me.btnQuickProducts.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!, System.Drawing.FontStyle.Bold)
         Me.btnQuickProducts.ForeColor = System.Drawing.Color.White
         Me.btnQuickProducts.Location = New System.Drawing.Point(18, 91)
-        Me.btnQuickProducts.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnQuickProducts.Margin = New System.Windows.Forms.Padding(2)
         Me.btnQuickProducts.Name = "btnQuickProducts"
         Me.btnQuickProducts.Size = New System.Drawing.Size(234, 39)
         Me.btnQuickProducts.TabIndex = 1
@@ -366,7 +366,7 @@ Partial Class Dashboard
         Me.btnQuickPOS.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!, System.Drawing.FontStyle.Bold)
         Me.btnQuickPOS.ForeColor = System.Drawing.Color.White
         Me.btnQuickPOS.Location = New System.Drawing.Point(18, 39)
-        Me.btnQuickPOS.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnQuickPOS.Margin = New System.Windows.Forms.Padding(2)
         Me.btnQuickPOS.Name = "btnQuickPOS"
         Me.btnQuickPOS.Size = New System.Drawing.Size(234, 39)
         Me.btnQuickPOS.TabIndex = 0
@@ -382,7 +382,7 @@ Partial Class Dashboard
         Me.Controls.Add(Me.grpLowStock)
         Me.Controls.Add(Me.pnlStats)
         Me.Controls.Add(Me.lblTitle)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Dashboard"
         Me.Text = "Dashboard"
         Me.pnlStats.ResumeLayout(False)

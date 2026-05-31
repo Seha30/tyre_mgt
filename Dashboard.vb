@@ -86,4 +86,5 @@ Public Class Dashboard
         GetMainMenu()?.OpenModule(New ReportsFrm(), "Reports", Nothing)
     End Sub
 
+
 End Class

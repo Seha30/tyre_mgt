@@ -72,7 +72,7 @@ Partial Class SalesPOS
         Me.lblTitle.Location = New System.Drawing.Point(0, 0)
         Me.lblTitle.Name = "lblTitle"
         Me.lblTitle.Padding = New System.Windows.Forms.Padding(12, 8, 0, 0)
-        Me.lblTitle.Size = New System.Drawing.Size(1100, 40)
+        Me.lblTitle.Size = New System.Drawing.Size(1206, 40)
         Me.lblTitle.TabIndex = 1
         Me.lblTitle.Text = "Sales Point of Sale (POS)"
         '
@@ -89,8 +89,8 @@ Partial Class SalesPOS
         'splitMain.Panel2
         '
         Me.splitMain.Panel2.Controls.Add(Me.pnlCheckout)
-        Me.splitMain.Size = New System.Drawing.Size(1100, 580)
-        Me.splitMain.SplitterDistance = 480
+        Me.splitMain.Size = New System.Drawing.Size(1206, 569)
+        Me.splitMain.SplitterDistance = 649
         Me.splitMain.TabIndex = 0
         '
         'grpCatalog
@@ -103,7 +103,7 @@ Partial Class SalesPOS
         Me.grpCatalog.ForeColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
         Me.grpCatalog.Location = New System.Drawing.Point(0, 0)
         Me.grpCatalog.Name = "grpCatalog"
-        Me.grpCatalog.Size = New System.Drawing.Size(480, 580)
+        Me.grpCatalog.Size = New System.Drawing.Size(649, 569)
         Me.grpCatalog.TabIndex = 0
         Me.grpCatalog.Text = "Product Catalog"
         '
@@ -129,7 +129,7 @@ Partial Class SalesPOS
         Me.dgvCatalog.Name = "dgvCatalog"
         Me.dgvCatalog.ReadOnly = True
         Me.dgvCatalog.RowHeadersVisible = False
-        Me.dgvCatalog.Size = New System.Drawing.Size(480, 488)
+        Me.dgvCatalog.Size = New System.Drawing.Size(649, 477)
         Me.dgvCatalog.TabIndex = 0
         Me.dgvCatalog.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
         Me.dgvCatalog.ThemeStyle.AlternatingRowsStyle.Font = Nothing
@@ -160,7 +160,7 @@ Partial Class SalesPOS
         Me.pnlCatalogSearch.Dock = System.Windows.Forms.DockStyle.Top
         Me.pnlCatalogSearch.Location = New System.Drawing.Point(0, 40)
         Me.pnlCatalogSearch.Name = "pnlCatalogSearch"
-        Me.pnlCatalogSearch.Size = New System.Drawing.Size(480, 52)
+        Me.pnlCatalogSearch.Size = New System.Drawing.Size(649, 52)
         Me.pnlCatalogSearch.TabIndex = 1
         '
         'btnSearchItemPOS
@@ -194,7 +194,7 @@ Partial Class SalesPOS
         Me.pnlCheckout.Dock = System.Windows.Forms.DockStyle.Fill
         Me.pnlCheckout.Location = New System.Drawing.Point(0, 0)
         Me.pnlCheckout.Name = "pnlCheckout"
-        Me.pnlCheckout.Size = New System.Drawing.Size(616, 580)
+        Me.pnlCheckout.Size = New System.Drawing.Size(553, 569)
         Me.pnlCheckout.TabIndex = 0
         '
         'grpCheckout
@@ -211,9 +211,9 @@ Partial Class SalesPOS
         Me.grpCheckout.FillColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.grpCheckout.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.grpCheckout.ForeColor = System.Drawing.Color.White
-        Me.grpCheckout.Location = New System.Drawing.Point(0, 400)
+        Me.grpCheckout.Location = New System.Drawing.Point(0, 369)
         Me.grpCheckout.Name = "grpCheckout"
-        Me.grpCheckout.Size = New System.Drawing.Size(616, 180)
+        Me.grpCheckout.Size = New System.Drawing.Size(553, 200)
         Me.grpCheckout.TabIndex = 0
         Me.grpCheckout.Text = "Payment Summary"
         '
@@ -278,7 +278,7 @@ Partial Class SalesPOS
         Me.txtTotal.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtTotal.DefaultText = ""
         Me.txtTotal.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.txtTotal.Location = New System.Drawing.Point(200, 129)
+        Me.txtTotal.Location = New System.Drawing.Point(140, 96)
         Me.txtTotal.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtTotal.Name = "txtTotal"
         Me.txtTotal.PlaceholderText = ""
@@ -322,7 +322,7 @@ Partial Class SalesPOS
         Me.grpCart.ForeColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
         Me.grpCart.Location = New System.Drawing.Point(0, 100)
         Me.grpCart.Name = "grpCart"
-        Me.grpCart.Size = New System.Drawing.Size(616, 480)
+        Me.grpCart.Size = New System.Drawing.Size(553, 469)
         Me.grpCart.TabIndex = 1
         Me.grpCart.Text = "Shopping Cart"
         '
@@ -351,10 +351,10 @@ Partial Class SalesPOS
         DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.dgvCart.DefaultCellStyle = DataGridViewCellStyle9
         Me.dgvCart.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.dgvCart.Location = New System.Drawing.Point(12, 72)
+        Me.dgvCart.Location = New System.Drawing.Point(3, 74)
         Me.dgvCart.Name = "dgvCart"
         Me.dgvCart.RowHeadersVisible = False
-        Me.dgvCart.Size = New System.Drawing.Size(896, 540)
+        Me.dgvCart.Size = New System.Drawing.Size(645, 518)
         Me.dgvCart.TabIndex = 0
         Me.dgvCart.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
         Me.dgvCart.ThemeStyle.AlternatingRowsStyle.Font = Nothing
@@ -435,7 +435,7 @@ Partial Class SalesPOS
         Me.grpCustomer.ForeColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
         Me.grpCustomer.Location = New System.Drawing.Point(0, 0)
         Me.grpCustomer.Name = "grpCustomer"
-        Me.grpCustomer.Size = New System.Drawing.Size(616, 100)
+        Me.grpCustomer.Size = New System.Drawing.Size(553, 100)
         Me.grpCustomer.TabIndex = 2
         Me.grpCustomer.Text = "Customer & Payment"
         '
@@ -494,7 +494,7 @@ Partial Class SalesPOS
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(250, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1100, 620)
+        Me.ClientSize = New System.Drawing.Size(1206, 609)
         Me.Controls.Add(Me.splitMain)
         Me.Controls.Add(Me.lblTitle)
         Me.Name = "SalesPOS"
