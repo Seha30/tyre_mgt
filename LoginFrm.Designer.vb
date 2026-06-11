@@ -26,8 +26,10 @@ Partial Class LoginFrm
         Me.lblPassword = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.lblUsername = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.lblLoginTitle = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.Guna2CustomGradientPanel1 = New Guna.UI2.WinForms.Guna2CustomGradientPanel()
         Me.pnlBrand.SuspendLayout()
         Me.pnlLoginCard.SuspendLayout()
+        Me.Guna2CustomGradientPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'pnlBrand
@@ -47,9 +49,9 @@ Partial Class LoginFrm
         Me.lblBrandSubtitle.BackColor = System.Drawing.Color.Transparent
         Me.lblBrandSubtitle.Font = New System.Drawing.Font("Segoe UI", 11.0!)
         Me.lblBrandSubtitle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.lblBrandSubtitle.Location = New System.Drawing.Point(27, 237)
+        Me.lblBrandSubtitle.Location = New System.Drawing.Point(27, 243)
         Me.lblBrandSubtitle.Name = "lblBrandSubtitle"
-        Me.lblBrandSubtitle.Size = New System.Drawing.Size(451, 74)
+        Me.lblBrandSubtitle.Size = New System.Drawing.Size(451, 231)
         Me.lblBrandSubtitle.TabIndex = 1
         Me.lblBrandSubtitle.Text = "Inventory & Service Management" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Piliyandala • Tyres • POS • Stock"
         '
@@ -82,7 +84,7 @@ Partial Class LoginFrm
         Me.pnlLoginCard.Controls.Add(Me.lblUsername)
         Me.pnlLoginCard.Controls.Add(Me.lblLoginTitle)
         Me.pnlLoginCard.FillColor = System.Drawing.Color.White
-        Me.pnlLoginCard.Location = New System.Drawing.Point(528, 59)
+        Me.pnlLoginCard.Location = New System.Drawing.Point(20, 83)
         Me.pnlLoginCard.Name = "pnlLoginCard"
         Me.pnlLoginCard.ShadowDecoration.Enabled = True
         Me.pnlLoginCard.Size = New System.Drawing.Size(497, 425)
@@ -94,9 +96,9 @@ Partial Class LoginFrm
         Me.lblFooter.BackColor = System.Drawing.Color.Transparent
         Me.lblFooter.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.lblFooter.ForeColor = System.Drawing.Color.Gray
-        Me.lblFooter.Location = New System.Drawing.Point(121, 339)
+        Me.lblFooter.Location = New System.Drawing.Point(65, 339)
         Me.lblFooter.Name = "lblFooter"
-        Me.lblFooter.Size = New System.Drawing.Size(245, 22)
+        Me.lblFooter.Size = New System.Drawing.Size(367, 22)
         Me.lblFooter.TabIndex = 6
         Me.lblFooter.Text = "H.M.S.Thathsiluni"
         Me.lblFooter.TextAlignment = System.Drawing.ContentAlignment.TopCenter
@@ -122,7 +124,7 @@ Partial Class LoginFrm
         Me.txtlogpword.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtlogpword.DefaultText = ""
         Me.txtlogpword.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.txtlogpword.Location = New System.Drawing.Point(32, 204)
+        Me.txtlogpword.Location = New System.Drawing.Point(32, 223)
         Me.txtlogpword.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtlogpword.Name = "txtlogpword"
         Me.txtlogpword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
@@ -153,7 +155,7 @@ Partial Class LoginFrm
         Me.lblPassword.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold)
         Me.lblPassword.Location = New System.Drawing.Point(32, 178)
         Me.lblPassword.Name = "lblPassword"
-        Me.lblPassword.Size = New System.Drawing.Size(111, 23)
+        Me.lblPassword.Size = New System.Drawing.Size(157, 38)
         Me.lblPassword.TabIndex = 2
         Me.lblPassword.Text = "Password"
         '
@@ -162,9 +164,9 @@ Partial Class LoginFrm
         Me.lblUsername.AutoSize = False
         Me.lblUsername.BackColor = System.Drawing.Color.Transparent
         Me.lblUsername.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.lblUsername.Location = New System.Drawing.Point(32, 88)
+        Me.lblUsername.Location = New System.Drawing.Point(32, 78)
         Me.lblUsername.Name = "lblUsername"
-        Me.lblUsername.Size = New System.Drawing.Size(111, 23)
+        Me.lblUsername.Size = New System.Drawing.Size(194, 33)
         Me.lblUsername.TabIndex = 1
         Me.lblUsername.Text = "Username"
         '
@@ -174,11 +176,20 @@ Partial Class LoginFrm
         Me.lblLoginTitle.BackColor = System.Drawing.Color.Transparent
         Me.lblLoginTitle.Font = New System.Drawing.Font("Segoe UI", 16.0!, System.Drawing.FontStyle.Bold)
         Me.lblLoginTitle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.lblLoginTitle.Location = New System.Drawing.Point(32, 28)
+        Me.lblLoginTitle.Location = New System.Drawing.Point(20, 28)
         Me.lblLoginTitle.Name = "lblLoginTitle"
-        Me.lblLoginTitle.Size = New System.Drawing.Size(244, 54)
+        Me.lblLoginTitle.Size = New System.Drawing.Size(346, 54)
         Me.lblLoginTitle.TabIndex = 0
         Me.lblLoginTitle.Text = "Staff Login"
+        '
+        'Guna2CustomGradientPanel1
+        '
+        Me.Guna2CustomGradientPanel1.Controls.Add(Me.pnlLoginCard)
+        Me.Guna2CustomGradientPanel1.Dock = System.Windows.Forms.DockStyle.Right
+        Me.Guna2CustomGradientPanel1.Location = New System.Drawing.Point(508, 0)
+        Me.Guna2CustomGradientPanel1.Name = "Guna2CustomGradientPanel1"
+        Me.Guna2CustomGradientPanel1.Size = New System.Drawing.Size(529, 553)
+        Me.Guna2CustomGradientPanel1.TabIndex = 2
         '
         'LoginFrm
         '
@@ -187,7 +198,7 @@ Partial Class LoginFrm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(250, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1037, 553)
-        Me.Controls.Add(Me.pnlLoginCard)
+        Me.Controls.Add(Me.Guna2CustomGradientPanel1)
         Me.Controls.Add(Me.pnlBrand)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
@@ -196,6 +207,7 @@ Partial Class LoginFrm
         Me.Text = "S & N Tyre Center - Login"
         Me.pnlBrand.ResumeLayout(False)
         Me.pnlLoginCard.ResumeLayout(False)
+        Me.Guna2CustomGradientPanel1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -211,4 +223,5 @@ Partial Class LoginFrm
     Friend WithEvents txtlogpword As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents btnLogin As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents lblFooter As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents Guna2CustomGradientPanel1 As Guna.UI2.WinForms.Guna2CustomGradientPanel
 End Class

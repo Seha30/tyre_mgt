@@ -145,12 +145,6 @@
     <Compile Include="AddCustomer.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddCustomerControl.Designer.vb">
-      <DependentUpon>AddCustomerControl.vb</DependentUpon>
-    </Compile>
-    <Compile Include="AddCustomerControl.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Include="AddSupplierMgt.Designer.vb">
       <DependentUpon>AddSupplierMgt.vb</DependentUpon>
     </Compile>
@@ -158,10 +152,10 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CustomerCRUD.vb" />
+    <Compile Include="DashboardCRUD.vb" />
     <Compile Include="ItemCRUD.vb" />
     <Compile Include="SupplierCRUD.vb" />
     <Compile Include="StaffCRUD.vb" />
-    <Compile Include="UiThemeHelper.vb" />
     <Compile Include="ValidationHelper.vb" />
     <Compile Include="Dashboard.Designer.vb">
       <DependentUpon>Dashboard.vb</DependentUpon>
@@ -170,13 +164,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DBConn.vb" />
-    <Compile Include="Form1.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="InventoryMgtFrm.Designer.vb">
       <DependentUpon>InventoryMgtFrm.vb</DependentUpon>
     </Compile>
@@ -235,6 +222,13 @@
     <Compile Include="StaffMgtFrm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ProfileCRUD.vb" />
+    <Compile Include="ProfileFrm.Designer.vb">
+      <DependentUpon>ProfileFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ProfileFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ReportsFrm.Designer.vb">
       <DependentUpon>ReportsFrm.vb</DependentUpon>
     </Compile>
@@ -245,9 +239,6 @@
   <ItemGroup>
     <EmbeddedResource Include="AddCustomer.resx">
       <DependentUpon>AddCustomer.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AddCustomerControl.resx">
-      <DependentUpon>AddCustomerControl.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.vb</DependentUpon>
@@ -269,6 +260,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ProductMgtFrm.resx">
       <DependentUpon>ProductMgtFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfileFrm.resx">
+      <DependentUpon>ProfileFrm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReportsFrm.resx">
       <DependentUpon>ReportsFrm.vb</DependentUpon>

@@ -1,14 +1,14 @@
 ﻿Public Class AddSupplierMgt
 
     Private Sub AddSupplierMgt_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        UiThemeHelper.StyleGroupBox(grpDetails)
-        UiThemeHelper.StyleGroupBox(grpList)
-        UiThemeHelper.StylePrimaryButton(btnAddSup)
-        UiThemeHelper.StylePrimaryButton(btnUpdateSup)
-        UiThemeHelper.StylePrimaryButton(btnSearchSup)
-        UiThemeHelper.StyleDangerButton(btnDeleteSup)
-        UiThemeHelper.StyleSecondaryButton(btnClearSup)
-        UiThemeHelper.ApplyGridTheme(dgvSuppliers)
+        'UiThemeHelper.StyleGroupBox(grpDetails)
+        'UiThemeHelper.StyleGroupBox(grpList)
+        'UiThemeHelper.StylePrimaryButton(btnAddSup)
+        'UiThemeHelper.StylePrimaryButton(btnUpdateSup)
+        'UiThemeHelper.StylePrimaryButton(btnSearchSup)
+        'UiThemeHelper.StyleDangerButton(btnDeleteSup)
+        'UiThemeHelper.StyleSecondaryButton(btnClearSup)
+        'UiThemeHelper.ApplyGridTheme(dgvSuppliers)
         LoadGrid()
     End Sub
 

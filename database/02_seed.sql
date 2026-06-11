@@ -37,9 +37,22 @@ INSERT INTO `items` (
   `retail_price`, `wholesale_price`, `cost_price`, `quantity`, `reorder_level`, `tracks_stock`, `sup_id`
 ) VALUES
 ('TYR-195-65-15', '195/65R15 Ceat Secura',  'Tyre',    'Ceat',     '195/65R15', 18500.00, 17200.00, 15000.00, 24, 5, 1, 1),
-('TYR-205-55-16', '205/55R16 Michelin',     'Tyre',    'Michelin', '205/55R16', 24500.00, 22800.00, 20000.00, 12, 5, 1, 2),
+('TYR-205-55-16', '205/55R16 Michelin',     'Tyre',    'Michelin', '205/55R16', 24500.00, 22800.00, 20000.00,  3, 5, 1, 2),
 ('TUB-165-13',    '165/13 Tube',            'Tube',    'Generic',  '165/13',     1200.00,  1000.00,   800.00, 40, 10, 1, 1),
 ('SRV-ALIGN',     'Wheel Alignment',        'Service', NULL,       NULL,         3500.00,  3000.00,     0.00,  0,  0, 0, NULL),
 ('SRV-BALANCE',   'Wheel Balancing (per tyre)','Service',NULL,      NULL,          800.00,   700.00,     0.00,  0,  0, 0, NULL),
 ('SRV-RIM',       'Rim Setting',            'Service', NULL,       NULL,         1500.00,  1200.00,     0.00,  0,  0, 0, NULL),
-('ACC-VALVE',     'Tubeless Valve',         'Accessory',NULL,      NULL,          250.00,   200.00,   120.00, 100, 20, 1, 1);
+('ACC-VALVE',     'Tubeless Valve',         'Accessory',NULL,      NULL,          250.00,   200.00,   120.00, 15, 20, 1, 1);
+
+-- Sample sales for dashboard (today's revenue demo)
+INSERT INTO `sales` (
+  `invoice_no`, `sale_date`, `cus_id`, `user_id`,
+  `subtotal`, `discount_amount`, `discount_pct`, `total_amount`,
+  `payment_method`, `status`
+) VALUES
+('INV-0001', CONCAT(CURDATE(), ' 10:30:00'), 1, 3, 37000.00, 0.00, 0.00, 37000.00, 'Cash', 'Completed'),
+('INV-0002', CONCAT(CURDATE(), ' 14:15:00'), 2, 3, 24500.00, 0.00, 0.00, 24500.00, 'Card', 'Completed');
+
+INSERT INTO `sale_items` (`sale_id`, `item_id`, `qty`, `unit_price`, `line_total`) VALUES
+(1, 1, 2, 18500.00, 37000.00),
+(2, 2, 1, 24500.00, 24500.00);

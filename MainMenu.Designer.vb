@@ -37,6 +37,7 @@ Partial Class MainMenu
         Me.btnStaffMgtMmenu = New Guna.UI2.WinForms.Guna2Button()
         Me.btnCustomer_mgt = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.btnMyProfile = New Guna.UI2.WinForms.Guna2Button()
         Me.lblWelcome = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.lblFormTitle = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.pnlContent = New Guna.UI2.WinForms.Guna2Panel()
@@ -109,22 +110,6 @@ Partial Class MainMenu
         Me.btnLogoutMmenu.TabIndex = 9
         Me.btnLogoutMmenu.Text = "Logout"
         '
-        'btnReportsMmenu
-        '
-        Me.btnReportsMmenu.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btnReportsMmenu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btnReportsMmenu.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnReportsMmenu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnReportsMmenu.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnReportsMmenu.Font = New System.Drawing.Font("Segoe UI Semibold", 10.8!, System.Drawing.FontStyle.Bold)
-        Me.btnReportsMmenu.ForeColor = System.Drawing.Color.Black
-        Me.btnReportsMmenu.Location = New System.Drawing.Point(0, 555)
-        Me.btnReportsMmenu.Margin = New System.Windows.Forms.Padding(5)
-        Me.btnReportsMmenu.Name = "btnReportsMmenu"
-        Me.btnReportsMmenu.Size = New System.Drawing.Size(200, 55)
-        Me.btnReportsMmenu.TabIndex = 10
-        Me.btnReportsMmenu.Text = "Reports"
-        '
         'btnSettingMmenu
         '
         Me.btnSettingMmenu.DisabledState.BorderColor = System.Drawing.Color.DarkGray
@@ -142,6 +127,22 @@ Partial Class MainMenu
         Me.btnSettingMmenu.Size = New System.Drawing.Size(200, 55)
         Me.btnSettingMmenu.TabIndex = 8
         Me.btnSettingMmenu.Text = "Settings"
+        '
+        'btnReportsMmenu
+        '
+        Me.btnReportsMmenu.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnReportsMmenu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnReportsMmenu.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnReportsMmenu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnReportsMmenu.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnReportsMmenu.Font = New System.Drawing.Font("Segoe UI Semibold", 10.8!, System.Drawing.FontStyle.Bold)
+        Me.btnReportsMmenu.ForeColor = System.Drawing.Color.Black
+        Me.btnReportsMmenu.Location = New System.Drawing.Point(0, 555)
+        Me.btnReportsMmenu.Margin = New System.Windows.Forms.Padding(5)
+        Me.btnReportsMmenu.Name = "btnReportsMmenu"
+        Me.btnReportsMmenu.Size = New System.Drawing.Size(200, 55)
+        Me.btnReportsMmenu.TabIndex = 10
+        Me.btnReportsMmenu.Text = "Reports"
         '
         'btnSupplierManagement
         '
@@ -245,7 +246,6 @@ Partial Class MainMenu
         Me.btnStaffMgtMmenu.Image = CType(resources.GetObject("btnStaffMgtMmenu.Image"), System.Drawing.Image)
         Me.btnStaffMgtMmenu.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
         Me.btnStaffMgtMmenu.Location = New System.Drawing.Point(0, 490)
-        Me.btnReportsMmenu.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
         Me.btnStaffMgtMmenu.Margin = New System.Windows.Forms.Padding(5)
         Me.btnStaffMgtMmenu.Name = "btnStaffMgtMmenu"
         Me.btnStaffMgtMmenu.Size = New System.Drawing.Size(200, 55)
@@ -272,6 +272,7 @@ Partial Class MainMenu
         '
         'Guna2Panel2
         '
+        Me.Guna2Panel2.Controls.Add(Me.btnMyProfile)
         Me.Guna2Panel2.Controls.Add(Me.lblWelcome)
         Me.Guna2Panel2.Controls.Add(Me.lblFormTitle)
         Me.Guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top
@@ -280,12 +281,25 @@ Partial Class MainMenu
         Me.Guna2Panel2.Size = New System.Drawing.Size(801, 100)
         Me.Guna2Panel2.TabIndex = 1
         '
+        'btnMyProfile
+        '
+        Me.btnMyProfile.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnMyProfile.BorderRadius = 10
+        Me.btnMyProfile.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnMyProfile.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.btnMyProfile.ForeColor = System.Drawing.Color.White
+        Me.btnMyProfile.Location = New System.Drawing.Point(640, 52)
+        Me.btnMyProfile.Name = "btnMyProfile"
+        Me.btnMyProfile.Size = New System.Drawing.Size(140, 36)
+        Me.btnMyProfile.TabIndex = 3
+        Me.btnMyProfile.Text = "My Profile"
+        '
         'lblWelcome
         '
         Me.lblWelcome.BackColor = System.Drawing.Color.Transparent
         Me.lblWelcome.Location = New System.Drawing.Point(21, 58)
         Me.lblWelcome.Name = "lblWelcome"
-        Me.lblWelcome.Size = New System.Drawing.Size(0, 0)
+        Me.lblWelcome.Size = New System.Drawing.Size(3, 2)
         Me.lblWelcome.TabIndex = 2
         Me.lblWelcome.Text = Nothing
         '
@@ -342,5 +356,6 @@ Partial Class MainMenu
     Friend WithEvents btnReportsMmenu As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnSupplierManagement As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnLogoutMmenu As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnMyProfile As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents lblWelcome As Guna.UI2.WinForms.Guna2HtmlLabel
 End Class

@@ -3,12 +3,12 @@
     Private selectedItemId As Integer = -1
 
     Private Sub InventoryMgtFrm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        UiThemeHelper.StyleGroupBox(grpAdjust)
-        UiThemeHelper.StyleGroupBox(grpStock)
-        UiThemeHelper.StylePrimaryButton(btnApplyAdjustment)
-        UiThemeHelper.StylePrimaryButton(btnSearchStock)
-        UiThemeHelper.StylePrimaryButton(btnRefreshStock)
-        UiThemeHelper.ApplyGridTheme(dgvStock)
+        'UiThemeHelper.StyleGroupBox(grpAdjust)
+        'UiThemeHelper.StyleGroupBox(grpStock)
+        'UiThemeHelper.StylePrimaryButton(btnApplyAdjustment)
+        'UiThemeHelper.StylePrimaryButton(btnSearchStock)
+        'UiThemeHelper.StylePrimaryButton(btnRefreshStock)
+        'UiThemeHelper.ApplyGridTheme(dgvStock)
         cmbReason.Items.AddRange(New Object() {"Purchase", "Damage", "Return", "Correction", "Other"})
         cmbReason.SelectedIndex = 0
         LoadStock()

@@ -15,12 +15,12 @@ Partial Class SalesPOS
 
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.lblTitle = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.splitMain = New System.Windows.Forms.SplitContainer()
         Me.grpCatalog = New Guna.UI2.WinForms.Guna2GroupBox()
@@ -30,6 +30,7 @@ Partial Class SalesPOS
         Me.txtSearchItemPOS = New Guna.UI2.WinForms.Guna2TextBox()
         Me.pnlCheckout = New Guna.UI2.WinForms.Guna2Panel()
         Me.grpCheckout = New Guna.UI2.WinForms.Guna2GroupBox()
+        Me.btnGenerateInvoce = New Guna.UI2.WinForms.Guna2Button()
         Me.lblSubtotal = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.txtSubtotal = New Guna.UI2.WinForms.Guna2TextBox()
         Me.lblDiscount = New Guna.UI2.WinForms.Guna2HtmlLabel()
@@ -49,6 +50,7 @@ Partial Class SalesPOS
         Me.lblPayment = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.cmbCustomerPOS = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.lblCustomerPOS = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.btnInvoicePrint = New Guna.UI2.WinForms.Guna2Button()
         CType(Me.splitMain, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.splitMain.Panel1.SuspendLayout()
         Me.splitMain.Panel2.SuspendLayout()
@@ -66,31 +68,32 @@ Partial Class SalesPOS
         'lblTitle
         '
         Me.lblTitle.BackColor = System.Drawing.Color.Transparent
-        Me.lblTitle.Dock = System.Windows.Forms.DockStyle.Top
-        Me.lblTitle.Font = New System.Drawing.Font("Segoe UI", 16.0!, System.Drawing.FontStyle.Bold)
-        Me.lblTitle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.lblTitle.Location = New System.Drawing.Point(0, 0)
         Me.lblTitle.Name = "lblTitle"
-        Me.lblTitle.Padding = New System.Windows.Forms.Padding(12, 8, 0, 0)
-        Me.lblTitle.Size = New System.Drawing.Size(1206, 40)
+        Me.lblTitle.Size = New System.Drawing.Size(155, 18)
         Me.lblTitle.TabIndex = 1
         Me.lblTitle.Text = "Sales Point of Sale (POS)"
+        Me.lblTitle.Visible = False
         '
         'splitMain
         '
         Me.splitMain.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.splitMain.Location = New System.Drawing.Point(0, 40)
+        Me.splitMain.Location = New System.Drawing.Point(0, 0)
+        Me.splitMain.Margin = New System.Windows.Forms.Padding(4)
         Me.splitMain.Name = "splitMain"
         '
         'splitMain.Panel1
         '
         Me.splitMain.Panel1.Controls.Add(Me.grpCatalog)
+        Me.splitMain.Panel1MinSize = 300
         '
         'splitMain.Panel2
         '
         Me.splitMain.Panel2.Controls.Add(Me.pnlCheckout)
-        Me.splitMain.Size = New System.Drawing.Size(1206, 569)
-        Me.splitMain.SplitterDistance = 649
+        Me.splitMain.Panel2MinSize = 340
+        Me.splitMain.Size = New System.Drawing.Size(1122, 738)
+        Me.splitMain.SplitterDistance = 320
+        Me.splitMain.SplitterWidth = 5
         Me.splitMain.TabIndex = 0
         '
         'grpCatalog
@@ -102,34 +105,37 @@ Partial Class SalesPOS
         Me.grpCatalog.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!, System.Drawing.FontStyle.Bold)
         Me.grpCatalog.ForeColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
         Me.grpCatalog.Location = New System.Drawing.Point(0, 0)
+        Me.grpCatalog.Margin = New System.Windows.Forms.Padding(4)
         Me.grpCatalog.Name = "grpCatalog"
-        Me.grpCatalog.Size = New System.Drawing.Size(649, 569)
+        Me.grpCatalog.Size = New System.Drawing.Size(320, 738)
         Me.grpCatalog.TabIndex = 0
         Me.grpCatalog.Text = "Product Catalog"
         '
         'dgvCatalog
         '
         Me.dgvCatalog.AllowUserToAddRows = False
-        DataGridViewCellStyle10.BackColor = System.Drawing.Color.White
-        Me.dgvCatalog.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle10
-        DataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
-        DataGridViewCellStyle11.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.dgvCatalog.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle11
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle12.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle12.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvCatalog.DefaultCellStyle = DataGridViewCellStyle12
+        DataGridViewCellStyle13.BackColor = System.Drawing.Color.White
+        Me.dgvCatalog.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle13
+        DataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        DataGridViewCellStyle14.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.dgvCatalog.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle14
+        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle15.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle15.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvCatalog.DefaultCellStyle = DataGridViewCellStyle15
         Me.dgvCatalog.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvCatalog.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.dgvCatalog.Location = New System.Drawing.Point(0, 92)
+        Me.dgvCatalog.Location = New System.Drawing.Point(0, 104)
+        Me.dgvCatalog.Margin = New System.Windows.Forms.Padding(4)
         Me.dgvCatalog.Name = "dgvCatalog"
         Me.dgvCatalog.ReadOnly = True
         Me.dgvCatalog.RowHeadersVisible = False
-        Me.dgvCatalog.Size = New System.Drawing.Size(649, 477)
+        Me.dgvCatalog.RowHeadersWidth = 51
+        Me.dgvCatalog.Size = New System.Drawing.Size(320, 634)
         Me.dgvCatalog.TabIndex = 0
         Me.dgvCatalog.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
         Me.dgvCatalog.ThemeStyle.AlternatingRowsStyle.Font = Nothing
@@ -159,8 +165,9 @@ Partial Class SalesPOS
         Me.pnlCatalogSearch.Controls.Add(Me.txtSearchItemPOS)
         Me.pnlCatalogSearch.Dock = System.Windows.Forms.DockStyle.Top
         Me.pnlCatalogSearch.Location = New System.Drawing.Point(0, 40)
+        Me.pnlCatalogSearch.Margin = New System.Windows.Forms.Padding(4)
         Me.pnlCatalogSearch.Name = "pnlCatalogSearch"
-        Me.pnlCatalogSearch.Size = New System.Drawing.Size(649, 52)
+        Me.pnlCatalogSearch.Size = New System.Drawing.Size(320, 64)
         Me.pnlCatalogSearch.TabIndex = 1
         '
         'btnSearchItemPOS
@@ -168,9 +175,10 @@ Partial Class SalesPOS
         Me.btnSearchItemPOS.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnSearchItemPOS.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.btnSearchItemPOS.ForeColor = System.Drawing.Color.White
-        Me.btnSearchItemPOS.Location = New System.Drawing.Point(320, 10)
+        Me.btnSearchItemPOS.Location = New System.Drawing.Point(427, 12)
+        Me.btnSearchItemPOS.Margin = New System.Windows.Forms.Padding(4)
         Me.btnSearchItemPOS.Name = "btnSearchItemPOS"
-        Me.btnSearchItemPOS.Size = New System.Drawing.Size(100, 32)
+        Me.btnSearchItemPOS.Size = New System.Drawing.Size(133, 39)
         Me.btnSearchItemPOS.TabIndex = 0
         Me.btnSearchItemPOS.Text = "Search"
         '
@@ -179,11 +187,12 @@ Partial Class SalesPOS
         Me.txtSearchItemPOS.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtSearchItemPOS.DefaultText = ""
         Me.txtSearchItemPOS.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.txtSearchItemPOS.Location = New System.Drawing.Point(12, 10)
+        Me.txtSearchItemPOS.Location = New System.Drawing.Point(16, 12)
+        Me.txtSearchItemPOS.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtSearchItemPOS.Name = "txtSearchItemPOS"
         Me.txtSearchItemPOS.PlaceholderText = "Search code, brand, size..."
         Me.txtSearchItemPOS.SelectedText = ""
-        Me.txtSearchItemPOS.Size = New System.Drawing.Size(300, 32)
+        Me.txtSearchItemPOS.Size = New System.Drawing.Size(400, 39)
         Me.txtSearchItemPOS.TabIndex = 1
         '
         'pnlCheckout
@@ -193,12 +202,15 @@ Partial Class SalesPOS
         Me.pnlCheckout.Controls.Add(Me.grpCustomer)
         Me.pnlCheckout.Dock = System.Windows.Forms.DockStyle.Fill
         Me.pnlCheckout.Location = New System.Drawing.Point(0, 0)
+        Me.pnlCheckout.Margin = New System.Windows.Forms.Padding(4)
         Me.pnlCheckout.Name = "pnlCheckout"
-        Me.pnlCheckout.Size = New System.Drawing.Size(553, 569)
+        Me.pnlCheckout.Size = New System.Drawing.Size(797, 738)
         Me.pnlCheckout.TabIndex = 0
         '
         'grpCheckout
         '
+        Me.grpCheckout.Controls.Add(Me.btnInvoicePrint)
+        Me.grpCheckout.Controls.Add(Me.btnGenerateInvoce)
         Me.grpCheckout.Controls.Add(Me.lblSubtotal)
         Me.grpCheckout.Controls.Add(Me.txtSubtotal)
         Me.grpCheckout.Controls.Add(Me.lblDiscount)
@@ -211,19 +223,37 @@ Partial Class SalesPOS
         Me.grpCheckout.FillColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
         Me.grpCheckout.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.grpCheckout.ForeColor = System.Drawing.Color.White
-        Me.grpCheckout.Location = New System.Drawing.Point(0, 369)
+        Me.grpCheckout.Location = New System.Drawing.Point(0, 391)
+        Me.grpCheckout.Margin = New System.Windows.Forms.Padding(4)
         Me.grpCheckout.Name = "grpCheckout"
-        Me.grpCheckout.Size = New System.Drawing.Size(553, 200)
+        Me.grpCheckout.Size = New System.Drawing.Size(797, 347)
         Me.grpCheckout.TabIndex = 0
         Me.grpCheckout.Text = "Payment Summary"
         '
+        'btnGenerateInvoce
+        '
+        Me.btnGenerateInvoce.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnGenerateInvoce.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnGenerateInvoce.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnGenerateInvoce.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnGenerateInvoce.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnGenerateInvoce.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnGenerateInvoce.ForeColor = System.Drawing.Color.White
+        Me.btnGenerateInvoce.Location = New System.Drawing.Point(187, 236)
+        Me.btnGenerateInvoce.Name = "btnGenerateInvoce"
+        Me.btnGenerateInvoce.Size = New System.Drawing.Size(267, 54)
+        Me.btnGenerateInvoce.TabIndex = 8
+        Me.btnGenerateInvoce.Text = "Invoice Generate"
+        '
         'lblSubtotal
         '
+        Me.lblSubtotal.AutoSize = False
         Me.lblSubtotal.BackColor = System.Drawing.Color.Transparent
         Me.lblSubtotal.ForeColor = System.Drawing.Color.White
-        Me.lblSubtotal.Location = New System.Drawing.Point(16, 48)
+        Me.lblSubtotal.Location = New System.Drawing.Point(21, 54)
+        Me.lblSubtotal.Margin = New System.Windows.Forms.Padding(4)
         Me.lblSubtotal.Name = "lblSubtotal"
-        Me.lblSubtotal.Size = New System.Drawing.Size(67, 15)
+        Me.lblSubtotal.Size = New System.Drawing.Size(134, 23)
         Me.lblSubtotal.TabIndex = 0
         Me.lblSubtotal.Text = "Subtotal (Rs.)"
         '
@@ -232,21 +262,24 @@ Partial Class SalesPOS
         Me.txtSubtotal.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtSubtotal.DefaultText = ""
         Me.txtSubtotal.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.txtSubtotal.Location = New System.Drawing.Point(140, 44)
+        Me.txtSubtotal.Location = New System.Drawing.Point(187, 54)
+        Me.txtSubtotal.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtSubtotal.Name = "txtSubtotal"
         Me.txtSubtotal.PlaceholderText = ""
         Me.txtSubtotal.ReadOnly = True
         Me.txtSubtotal.SelectedText = ""
-        Me.txtSubtotal.Size = New System.Drawing.Size(140, 32)
+        Me.txtSubtotal.Size = New System.Drawing.Size(187, 39)
         Me.txtSubtotal.TabIndex = 1
         '
         'lblDiscount
         '
+        Me.lblDiscount.AutoSize = False
         Me.lblDiscount.BackColor = System.Drawing.Color.Transparent
         Me.lblDiscount.ForeColor = System.Drawing.Color.White
-        Me.lblDiscount.Location = New System.Drawing.Point(300, 48)
+        Me.lblDiscount.Location = New System.Drawing.Point(400, 59)
+        Me.lblDiscount.Margin = New System.Windows.Forms.Padding(4)
         Me.lblDiscount.Name = "lblDiscount"
-        Me.lblDiscount.Size = New System.Drawing.Size(70, 15)
+        Me.lblDiscount.Size = New System.Drawing.Size(86, 34)
         Me.lblDiscount.TabIndex = 2
         Me.lblDiscount.Text = "Discount (Rs.)"
         '
@@ -255,21 +288,24 @@ Partial Class SalesPOS
         Me.txtDiscount.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtDiscount.DefaultText = ""
         Me.txtDiscount.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.txtDiscount.Location = New System.Drawing.Point(420, 44)
+        Me.txtDiscount.Location = New System.Drawing.Point(507, 59)
+        Me.txtDiscount.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtDiscount.Name = "txtDiscount"
         Me.txtDiscount.PlaceholderText = ""
         Me.txtDiscount.SelectedText = ""
-        Me.txtDiscount.Size = New System.Drawing.Size(100, 32)
+        Me.txtDiscount.Size = New System.Drawing.Size(133, 39)
         Me.txtDiscount.TabIndex = 3
         '
         'lblTotal
         '
+        Me.lblTotal.AutoSize = False
         Me.lblTotal.BackColor = System.Drawing.Color.Transparent
         Me.lblTotal.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
         Me.lblTotal.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.lblTotal.Location = New System.Drawing.Point(16, 96)
+        Me.lblTotal.Location = New System.Drawing.Point(21, 118)
+        Me.lblTotal.Margin = New System.Windows.Forms.Padding(4)
         Me.lblTotal.Name = "lblTotal"
-        Me.lblTotal.Size = New System.Drawing.Size(89, 23)
+        Me.lblTotal.Size = New System.Drawing.Size(147, 44)
         Me.lblTotal.TabIndex = 4
         Me.lblTotal.Text = "TOTAL (Rs.)"
         '
@@ -278,23 +314,24 @@ Partial Class SalesPOS
         Me.txtTotal.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtTotal.DefaultText = ""
         Me.txtTotal.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.txtTotal.Location = New System.Drawing.Point(140, 96)
-        Me.txtTotal.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtTotal.Location = New System.Drawing.Point(187, 118)
+        Me.txtTotal.Margin = New System.Windows.Forms.Padding(5)
         Me.txtTotal.Name = "txtTotal"
         Me.txtTotal.PlaceholderText = ""
         Me.txtTotal.ReadOnly = True
         Me.txtTotal.SelectedText = ""
-        Me.txtTotal.Size = New System.Drawing.Size(200, 36)
+        Me.txtTotal.Size = New System.Drawing.Size(267, 44)
         Me.txtTotal.TabIndex = 5
         '
         'btnCompleteSale
         '
         Me.btnCompleteSale.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnCompleteSale.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.btnCompleteSale.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCompleteSale.ForeColor = System.Drawing.Color.White
-        Me.btnCompleteSale.Location = New System.Drawing.Point(380, 88)
+        Me.btnCompleteSale.Location = New System.Drawing.Point(501, 175)
+        Me.btnCompleteSale.Margin = New System.Windows.Forms.Padding(4)
         Me.btnCompleteSale.Name = "btnCompleteSale"
-        Me.btnCompleteSale.Size = New System.Drawing.Size(200, 44)
+        Me.btnCompleteSale.Size = New System.Drawing.Size(267, 54)
         Me.btnCompleteSale.TabIndex = 6
         Me.btnCompleteSale.Text = "Complete Sale"
         '
@@ -303,9 +340,10 @@ Partial Class SalesPOS
         Me.btnClearCart.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.btnClearCart.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.btnClearCart.ForeColor = System.Drawing.Color.White
-        Me.btnClearCart.Location = New System.Drawing.Point(380, 40)
+        Me.btnClearCart.Location = New System.Drawing.Point(187, 180)
+        Me.btnClearCart.Margin = New System.Windows.Forms.Padding(4)
         Me.btnClearCart.Name = "btnClearCart"
-        Me.btnClearCart.Size = New System.Drawing.Size(200, 40)
+        Me.btnClearCart.Size = New System.Drawing.Size(267, 49)
         Me.btnClearCart.TabIndex = 7
         Me.btnClearCart.Text = "Clear Cart"
         '
@@ -320,41 +358,44 @@ Partial Class SalesPOS
         Me.grpCart.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.grpCart.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.grpCart.ForeColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.grpCart.Location = New System.Drawing.Point(0, 100)
+        Me.grpCart.Location = New System.Drawing.Point(0, 96)
+        Me.grpCart.Margin = New System.Windows.Forms.Padding(4)
         Me.grpCart.Name = "grpCart"
-        Me.grpCart.Size = New System.Drawing.Size(553, 469)
+        Me.grpCart.Size = New System.Drawing.Size(797, 642)
         Me.grpCart.TabIndex = 1
         Me.grpCart.Text = "Shopping Cart"
         '
         'dgvCart
         '
         Me.dgvCart.AllowUserToAddRows = False
-        DataGridViewCellStyle7.BackColor = System.Drawing.Color.White
-        Me.dgvCart.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle16.BackColor = System.Drawing.Color.White
+        Me.dgvCart.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle16
         Me.dgvCart.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvCart.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle9.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvCart.DefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle17.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        DataGridViewCellStyle17.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvCart.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle17
+        DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle18.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle18.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        DataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvCart.DefaultCellStyle = DataGridViewCellStyle18
         Me.dgvCart.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.dgvCart.Location = New System.Drawing.Point(3, 74)
+        Me.dgvCart.Location = New System.Drawing.Point(4, 91)
+        Me.dgvCart.Margin = New System.Windows.Forms.Padding(4)
         Me.dgvCart.Name = "dgvCart"
         Me.dgvCart.RowHeadersVisible = False
-        Me.dgvCart.Size = New System.Drawing.Size(645, 518)
+        Me.dgvCart.RowHeadersWidth = 51
+        Me.dgvCart.Size = New System.Drawing.Size(920, 703)
         Me.dgvCart.TabIndex = 0
         Me.dgvCart.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
         Me.dgvCart.ThemeStyle.AlternatingRowsStyle.Font = Nothing
@@ -383,9 +424,10 @@ Partial Class SalesPOS
         Me.btnAddToCart.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnAddToCart.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.btnAddToCart.ForeColor = System.Drawing.Color.White
-        Me.btnAddToCart.Location = New System.Drawing.Point(130, 36)
+        Me.btnAddToCart.Location = New System.Drawing.Point(173, 44)
+        Me.btnAddToCart.Margin = New System.Windows.Forms.Padding(4)
         Me.btnAddToCart.Name = "btnAddToCart"
-        Me.btnAddToCart.Size = New System.Drawing.Size(120, 32)
+        Me.btnAddToCart.Size = New System.Drawing.Size(160, 39)
         Me.btnAddToCart.TabIndex = 1
         Me.btnAddToCart.Text = "Add to Cart"
         '
@@ -394,9 +436,10 @@ Partial Class SalesPOS
         Me.btnRemoveLine.FillColor = System.Drawing.Color.FromArgb(CType(CType(220, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(69, Byte), Integer))
         Me.btnRemoveLine.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.btnRemoveLine.ForeColor = System.Drawing.Color.White
-        Me.btnRemoveLine.Location = New System.Drawing.Point(260, 36)
+        Me.btnRemoveLine.Location = New System.Drawing.Point(347, 44)
+        Me.btnRemoveLine.Margin = New System.Windows.Forms.Padding(4)
         Me.btnRemoveLine.Name = "btnRemoveLine"
-        Me.btnRemoveLine.Size = New System.Drawing.Size(120, 32)
+        Me.btnRemoveLine.Size = New System.Drawing.Size(160, 39)
         Me.btnRemoveLine.TabIndex = 2
         Me.btnRemoveLine.Text = "Remove Line"
         '
@@ -405,21 +448,24 @@ Partial Class SalesPOS
         Me.numQtyPOS.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.numQtyPOS.DefaultText = "1"
         Me.numQtyPOS.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.numQtyPOS.Location = New System.Drawing.Point(56, 36)
+        Me.numQtyPOS.Location = New System.Drawing.Point(75, 44)
+        Me.numQtyPOS.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.numQtyPOS.Name = "numQtyPOS"
         Me.numQtyPOS.PlaceholderText = ""
         Me.numQtyPOS.SelectedText = ""
-        Me.numQtyPOS.Size = New System.Drawing.Size(60, 32)
+        Me.numQtyPOS.Size = New System.Drawing.Size(80, 39)
         Me.numQtyPOS.TabIndex = 3
         '
         'lblQtyPOS
         '
         Me.lblQtyPOS.AutoSize = False
         Me.lblQtyPOS.BackColor = System.Drawing.Color.Transparent
+        Me.lblQtyPOS.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblQtyPOS.ForeColor = System.Drawing.Color.Black
-        Me.lblQtyPOS.Location = New System.Drawing.Point(12, 40)
+        Me.lblQtyPOS.Location = New System.Drawing.Point(16, 49)
+        Me.lblQtyPOS.Margin = New System.Windows.Forms.Padding(4)
         Me.lblQtyPOS.Name = "lblQtyPOS"
-        Me.lblQtyPOS.Size = New System.Drawing.Size(22, 17)
+        Me.lblQtyPOS.Size = New System.Drawing.Size(29, 21)
         Me.lblQtyPOS.TabIndex = 4
         Me.lblQtyPOS.Text = "Qty"
         '
@@ -434,8 +480,9 @@ Partial Class SalesPOS
         Me.grpCustomer.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.grpCustomer.ForeColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
         Me.grpCustomer.Location = New System.Drawing.Point(0, 0)
+        Me.grpCustomer.Margin = New System.Windows.Forms.Padding(4)
         Me.grpCustomer.Name = "grpCustomer"
-        Me.grpCustomer.Size = New System.Drawing.Size(553, 100)
+        Me.grpCustomer.Size = New System.Drawing.Size(797, 96)
         Me.grpCustomer.TabIndex = 2
         Me.grpCustomer.Text = "Customer & Payment"
         '
@@ -448,19 +495,22 @@ Partial Class SalesPOS
         Me.cmbPayment.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.cmbPayment.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.cmbPayment.ItemHeight = 30
-        Me.cmbPayment.Location = New System.Drawing.Point(480, 36)
+        Me.cmbPayment.Location = New System.Drawing.Point(640, 44)
+        Me.cmbPayment.Margin = New System.Windows.Forms.Padding(4)
         Me.cmbPayment.Name = "cmbPayment"
-        Me.cmbPayment.Size = New System.Drawing.Size(120, 36)
+        Me.cmbPayment.Size = New System.Drawing.Size(159, 36)
         Me.cmbPayment.TabIndex = 0
         '
         'lblPayment
         '
         Me.lblPayment.AutoSize = False
         Me.lblPayment.BackColor = System.Drawing.Color.Transparent
+        Me.lblPayment.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPayment.ForeColor = System.Drawing.Color.Black
-        Me.lblPayment.Location = New System.Drawing.Point(400, 40)
+        Me.lblPayment.Location = New System.Drawing.Point(533, 49)
+        Me.lblPayment.Margin = New System.Windows.Forms.Padding(4)
         Me.lblPayment.Name = "lblPayment"
-        Me.lblPayment.Size = New System.Drawing.Size(50, 17)
+        Me.lblPayment.Size = New System.Drawing.Size(160, 70)
         Me.lblPayment.TabIndex = 1
         Me.lblPayment.Text = "Payment"
         '
@@ -473,30 +523,49 @@ Partial Class SalesPOS
         Me.cmbCustomerPOS.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.cmbCustomerPOS.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.cmbCustomerPOS.ItemHeight = 30
-        Me.cmbCustomerPOS.Location = New System.Drawing.Point(100, 36)
+        Me.cmbCustomerPOS.Location = New System.Drawing.Point(173, 44)
+        Me.cmbCustomerPOS.Margin = New System.Windows.Forms.Padding(4)
         Me.cmbCustomerPOS.Name = "cmbCustomerPOS"
-        Me.cmbCustomerPOS.Size = New System.Drawing.Size(280, 36)
+        Me.cmbCustomerPOS.Size = New System.Drawing.Size(352, 36)
         Me.cmbCustomerPOS.TabIndex = 2
         '
         'lblCustomerPOS
         '
         Me.lblCustomerPOS.AutoSize = False
         Me.lblCustomerPOS.BackColor = System.Drawing.Color.Transparent
+        Me.lblCustomerPOS.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCustomerPOS.ForeColor = System.Drawing.Color.Black
-        Me.lblCustomerPOS.Location = New System.Drawing.Point(16, 40)
+        Me.lblCustomerPOS.Location = New System.Drawing.Point(21, 49)
+        Me.lblCustomerPOS.Margin = New System.Windows.Forms.Padding(4)
         Me.lblCustomerPOS.Name = "lblCustomerPOS"
-        Me.lblCustomerPOS.Size = New System.Drawing.Size(55, 17)
+        Me.lblCustomerPOS.Size = New System.Drawing.Size(134, 74)
         Me.lblCustomerPOS.TabIndex = 3
         Me.lblCustomerPOS.Text = "Customer"
         '
+        'btnInvoicePrint
+        '
+        Me.btnInvoicePrint.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnInvoicePrint.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnInvoicePrint.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnInvoicePrint.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnInvoicePrint.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnInvoicePrint.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnInvoicePrint.ForeColor = System.Drawing.Color.White
+        Me.btnInvoicePrint.Location = New System.Drawing.Point(501, 236)
+        Me.btnInvoicePrint.Name = "btnInvoicePrint"
+        Me.btnInvoicePrint.Size = New System.Drawing.Size(267, 54)
+        Me.btnInvoicePrint.TabIndex = 9
+        Me.btnInvoicePrint.Text = "Print Invoice"
+        '
         'SalesPOS
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(250, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1206, 609)
+        Me.ClientSize = New System.Drawing.Size(1122, 738)
         Me.Controls.Add(Me.splitMain)
         Me.Controls.Add(Me.lblTitle)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "SalesPOS"
         Me.splitMain.Panel1.ResumeLayout(False)
         Me.splitMain.Panel2.ResumeLayout(False)
@@ -507,7 +576,6 @@ Partial Class SalesPOS
         Me.pnlCatalogSearch.ResumeLayout(False)
         Me.pnlCheckout.ResumeLayout(False)
         Me.grpCheckout.ResumeLayout(False)
-        Me.grpCheckout.PerformLayout()
         Me.grpCart.ResumeLayout(False)
         CType(Me.dgvCart, System.ComponentModel.ISupportInitialize).EndInit()
         Me.grpCustomer.ResumeLayout(False)
@@ -544,4 +612,6 @@ Partial Class SalesPOS
     Friend WithEvents txtTotal As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents btnCompleteSale As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnClearCart As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnGenerateInvoce As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnInvoicePrint As Guna.UI2.WinForms.Guna2Button
 End Class

@@ -1,12 +1,12 @@
 ﻿Public Class StaffMgtFrm
 
     Private Sub StaffMgtFrm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        UiThemeHelper.StyleGroupBox(grpDetails)
-        UiThemeHelper.StyleGroupBox(grpList)
-        UiThemeHelper.StylePrimaryButton(btnAddStaff)
-        UiThemeHelper.StylePrimaryButton(btnUpdateStaff)
-        UiThemeHelper.StyleSecondaryButton(btnClearStaff)
-        UiThemeHelper.ApplyGridTheme(dgvStaff)
+        'UiThemeHelper.StyleGroupBox(grpDetails)
+        'UiThemeHelper.StyleGroupBox(grpList)
+        'UiThemeHelper.StylePrimaryButton(btnAddStaff)
+        'UiThemeHelper.StylePrimaryButton(btnUpdateStaff)
+        'UiThemeHelper.StyleSecondaryButton(btnClearStaff)
+        'UiThemeHelper.ApplyGridTheme(dgvStaff)
         cmbRole.Items.AddRange(New Object() {"Admin", "Manager", "Cashier"})
         cmbRole.SelectedIndex = 2
         LoadGrid()
@@ -72,5 +72,7 @@
         Return ""
     End Function
 
+    Private Sub lblTitle_Click(sender As Object, e As EventArgs) Handles lblTitle.Click
 
+    End Sub
 End Class

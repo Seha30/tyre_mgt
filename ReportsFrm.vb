@@ -5,11 +5,11 @@ Imports MySql.Data.MySqlClient
 Public Class ReportsFrm
 
     Private Sub ReportsFrm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        UiThemeHelper.StyleGroupBox(grpFilters)
-        UiThemeHelper.StyleGroupBox(grpResults)
-        UiThemeHelper.StylePrimaryButton(btnGenerateReport)
-        UiThemeHelper.StylePrimaryButton(btnExportReport)
-        UiThemeHelper.ApplyGridTheme(dgvReport)
+        'UiThemeHelper.StyleGroupBox(grpFilters)
+        'UiThemeHelper.StyleGroupBox(grpResults)
+        'UiThemeHelper.StylePrimaryButton(btnGenerateReport)
+        'UiThemeHelper.StylePrimaryButton(btnExportReport)
+        'UiThemeHelper.ApplyGridTheme(dgvReport)
         cmbReportType.Items.AddRange(New Object() {
             "Daily Sales Summary",
             "Low Stock Items",
@@ -79,4 +79,7 @@ Public Class ReportsFrm
         End Using
     End Sub
 
+    Private Sub grpFilters_Click(sender As Object, e As EventArgs) Handles grpFilters.Click
+
+    End Sub
 End Class

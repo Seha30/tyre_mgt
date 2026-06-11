@@ -29,9 +29,31 @@
         HighlightButton(activeBtn)
     End Sub
 
+    Public Sub RefreshWelcomeLabel(displayName As String)
+        lblWelcome.Text = "Welcome, " & displayName & " (" & CurrentRole & ")"
+    End Sub
+
+    Private Function GetWelcomeDisplayName() As String
+        Try
+            Dim p = ProfileCRUD.GetProfileByUsername(CurrentUser)
+            If p IsNot Nothing AndAlso Not String.IsNullOrWhiteSpace(p.FullName) Then
+                Return p.FullName
+            End If
+        Catch
+        End Try
+        Return CurrentUser
+    End Function
+
+    Private Sub OpenProfileModule()
+        Dim pf As New ProfileFrm()
+        pf.LoggedInUsername = CurrentUser
+        OpenModule(pf, "My Profile", Nothing)
+    End Sub
+
     Private Sub MainMenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'UiThemeHelper.StylePrimaryButton(btnMyProfile)
         lblFormTitle.Text = "Dashboard"
-        lblWelcome.Text = "Welcome, " & CurrentUser & " (" & CurrentRole & ")"
+        RefreshWelcomeLabel(GetWelcomeDisplayName())
         btnDashboardMmenu.Visible = False
         btnProductMgtMmenu.Visible = False
         btnCustomer_mgt.Visible = False
@@ -42,6 +64,7 @@
         btnReportsMmenu.Visible = False
         btnSettingMmenu.Visible = False
         btnLogoutMmenu.Visible = True
+        btnMyProfile.Visible = True
 
         Select Case CurrentRole
             Case "Admin"
@@ -71,6 +94,10 @@
         End Select
 
         OpenModule(New Dashboard(), "Dashboard", btnDashboardMmenu)
+    End Sub
+
+    Private Sub btnMyProfile_Click(sender As Object, e As EventArgs) Handles btnMyProfile.Click
+        OpenProfileModule()
     End Sub
 
     Private Sub btnDashboardMmenu_Click(sender As Object, e As EventArgs) Handles btnDashboardMmenu.Click
@@ -116,4 +143,7 @@
         Me.Close()
     End Sub
 
+    Private Sub pnlContent_Paint(sender As Object, e As PaintEventArgs) Handles pnlContent.Paint
+
+    End Sub
 End Class

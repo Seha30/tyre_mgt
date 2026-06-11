@@ -1,14 +1,14 @@
 ﻿Public Class ProductMgtFrm
 
     Private Sub ProductMgtFrm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        UiThemeHelper.StyleGroupBox(grpDetails)
-        UiThemeHelper.StyleGroupBox(grpList)
-        UiThemeHelper.StylePrimaryButton(btnAddProduct)
-        UiThemeHelper.StylePrimaryButton(btnUpdateProduct)
-        UiThemeHelper.StylePrimaryButton(btnSearchProduct)
-        UiThemeHelper.StyleDangerButton(btnDeleteProduct)
-        UiThemeHelper.StyleSecondaryButton(btnClearProduct)
-        UiThemeHelper.ApplyGridTheme(dgvProducts)
+        'UiThemeHelper.StyleGroupBox(grpDetails)
+        'UiThemeHelper.StyleGroupBox(grpList)
+        'UiThemeHelper.StylePrimaryButton(btnAddProduct)
+        'UiThemeHelper.StylePrimaryButton(btnUpdateProduct)
+        'UiThemeHelper.StylePrimaryButton(btnSearchProduct)
+        'UiThemeHelper.StyleDangerButton(btnDeleteProduct)
+        'UiThemeHelper.StyleSecondaryButton(btnClearProduct)
+        'UiThemeHelper.ApplyGridTheme(dgvProducts)
         cmbItemType.Items.Clear()
         cmbItemType.Items.AddRange(New Object() {"Tyre", "Tube", "Service", "Accessory"})
         cmbItemType.SelectedIndex = 0
@@ -125,4 +125,7 @@
         Return ""
     End Function
 
+    Private Sub grpDetails_Click(sender As Object, e As EventArgs) Handles grpDetails.Click
+
+    End Sub
 End Class

@@ -3,7 +3,7 @@
 Public Class LoginFrm
 
     Private Sub LoginFrm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        UiThemeHelper.StylePrimaryButton(btnLogin)
+        ' UiThemeHelper.StylePrimaryButton(btnLogin)
         txtlogusername.Focus()
     End Sub
 

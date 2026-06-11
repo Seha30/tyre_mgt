@@ -3,62 +3,61 @@
 Public Class Dashboard
 
     Private Sub Dashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        UiThemeHelper.StylePrimaryButton(btnRefreshDashboard)
-        UiThemeHelper.StylePrimaryButton(btnQuickPOS)
-        UiThemeHelper.StyleSecondaryButton(btnQuickReports)
-        UiThemeHelper.ApplyGridTheme(dgvLowStock)
+        StyleDashboard()
         LoadDashboardData()
+    End Sub
+
+    Private Sub Dashboard_VisibleChanged(sender As Object, e As EventArgs) Handles MyBase.VisibleChanged
+        If Me.Visible Then LoadDashboardData()
+    End Sub
+
+    Private Sub StyleDashboard()
+        btnRefreshDashboard.FillColor = Color.FromArgb(255, 128, 0)
+        btnRefreshDashboard.ForeColor = Color.White
+        btnQuickPOS.FillColor = Color.FromArgb(255, 128, 0)
+        btnQuickPOS.ForeColor = Color.White
+        btnQuickProducts.FillColor = Color.FromArgb(30, 30, 30)
+        btnQuickProducts.ForeColor = Color.White
+        btnQuickReports.FillColor = Color.FromArgb(255, 224, 192)
+        btnQuickReports.ForeColor = Color.Black
+
+        dgvLowStock.AutoGenerateColumns = True
+        dgvLowStock.ReadOnly = True
+        dgvLowStock.RowHeadersVisible = False
+        dgvLowStock.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+        dgvLowStock.BackgroundColor = Color.White
+        dgvLowStock.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(255, 128, 0)
+        dgvLowStock.ColumnHeadersDefaultCellStyle.ForeColor = Color.White
+        dgvLowStock.EnableHeadersVisualStyles = False
     End Sub
 
     Public Sub LoadDashboardData()
         Try
             Using conn As MySqlConnection = GetConnection()
-                lblCustomersVal.Text = Scalar(conn, "SELECT COUNT(*) FROM customers").ToString()
-                Try
-                    lblProductsVal.Text = Scalar(conn, "SELECT COUNT(*) FROM items WHERE is_active=1").ToString()
-                    lblLowStockVal.Text = Scalar(conn, "SELECT COUNT(*) FROM items WHERE tracks_stock=1 AND quantity<=reorder_level AND is_active=1").ToString()
-                    lblTodaySalesVal.Text = "Rs. " & Format(ScalarDec(conn, "SELECT IFNULL(SUM(total_amount),0) FROM sales WHERE DATE(sale_date)=CURDATE() AND status='Completed'"), "#,##0.00")
-                    LoadLowStockGrid(conn)
-                Catch
+                If conn.State <> ConnectionState.Open Then
+                    lblCustomersVal.Text = "—"
                     lblProductsVal.Text = "—"
                     lblLowStockVal.Text = "—"
                     lblTodaySalesVal.Text = "Rs. 0.00"
-                End Try
+                    dgvLowStock.DataSource = Nothing
+                    Return
+                End If
+
+                lblCustomersVal.Text = DashboardCRUD.GetCustomerCount(conn).ToString()
+                lblProductsVal.Text = DashboardCRUD.GetActiveProductCount(conn).ToString()
+                lblLowStockVal.Text = DashboardCRUD.GetLowStockCount(conn).ToString()
+
+                Dim todaySales = DashboardCRUD.GetTodaySalesTotal(conn)
+                lblTodaySalesVal.Text = "Rs. " & Format(todaySales, "#,##0.00")
+
+                dgvLowStock.DataSource = DashboardCRUD.GetLowStockTable(conn)
+                If dgvLowStock.Columns.Count > 0 Then
+                    dgvLowStock.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.DisplayedCells)
+                End If
             End Using
-        Catch
-            lblCustomersVal.Text = ScalarSafe("SELECT COUNT(*) FROM customers")
+        Catch ex As Exception
+            MessageBox.Show("Dashboard load error: " & ex.Message, "Dashboard", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End Try
-    End Sub
-
-    Private Function ScalarSafe(sql As String) As String
-        Try
-            Using conn As MySqlConnection = GetConnection()
-                Return Scalar(conn, sql).ToString()
-            End Using
-        Catch
-            Return "0"
-        End Try
-    End Function
-
-    Private Function Scalar(conn As MySqlConnection, sql As String) As Long
-        Using cmd As New MySqlCommand(sql, conn)
-            Return Convert.ToInt64(cmd.ExecuteScalar())
-        End Using
-    End Function
-
-    Private Function ScalarDec(conn As MySqlConnection, sql As String) As Decimal
-        Using cmd As New MySqlCommand(sql, conn)
-            Return Convert.ToDecimal(cmd.ExecuteScalar())
-        End Using
-    End Function
-
-    Private Sub LoadLowStockGrid(conn As MySqlConnection)
-        Dim sql As String = "SELECT item_code AS Code, item_name AS Product, brand AS Brand, tyre_size AS Size, quantity AS Qty, reorder_level AS Reorder FROM items WHERE tracks_stock=1 AND quantity<=reorder_level AND is_active=1 ORDER BY quantity LIMIT 50"
-        Using da As New MySqlDataAdapter(sql, conn)
-            Dim dt As New DataTable()
-            da.Fill(dt)
-            dgvLowStock.DataSource = dt
-        End Using
     End Sub
 
     Private Sub btnRefreshDashboard_Click(sender As Object, e As EventArgs) Handles btnRefreshDashboard.Click

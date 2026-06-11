@@ -2,13 +2,13 @@
 
 Public Class AddCustomer
     Private Sub AddCustomer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        UiThemeHelper.StyleGroupBox(Guna2GroupBox1)
-        UiThemeHelper.StyleGroupBox(Guna2GroupBox2)
-        UiThemeHelper.StylePrimaryButton(btnAddCustomerCusfrm)
-        UiThemeHelper.StylePrimaryButton(btnUpdateCustomerCusfrm)
-        UiThemeHelper.StylePrimaryButton(btnSearchCustomer)
-        UiThemeHelper.StyleDangerButton(btnDeleteCustomerCusfrm)
-        UiThemeHelper.ApplyGridTheme(dgvCustomers)
+        'UiThemeHelper.StyleGroupBox(Guna2GroupBox1)
+        'UiThemeHelper.StyleGroupBox(Guna2GroupBox2)
+        'UiThemeHelper.StylePrimaryButton(btnAddCustomerCusfrm)
+        'UiThemeHelper.StylePrimaryButton(btnUpdateCustomerCusfrm)
+        'UiThemeHelper.StylePrimaryButton(btnSearchCustomer)
+        'UiThemeHelper.StyleDangerButton(btnDeleteCustomerCusfrm)
+        'UiThemeHelper.ApplyGridTheme(dgvCustomers)
         cmbcustomerType.Items.Clear()
         cmbcustomerType.Items.AddRange(New Object() {"Retail", "Wholesale", "Distributor"})
         Guna2GroupBox1.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
