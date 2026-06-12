@@ -258,7 +258,7 @@ Partial Class MainMenu
         Me.btnCustomer_mgt.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.btnCustomer_mgt.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.btnCustomer_mgt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnCustomer_mgt.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnCustomer_mgt.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnCustomer_mgt.Font = New System.Drawing.Font("Segoe UI Semibold", 10.8!, System.Drawing.FontStyle.Bold)
         Me.btnCustomer_mgt.ForeColor = System.Drawing.Color.Black
         Me.btnCustomer_mgt.Image = CType(resources.GetObject("btnCustomer_mgt.Image"), System.Drawing.Image)
